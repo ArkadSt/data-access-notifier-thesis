@@ -1,0 +1,26 @@
+\babel@toc {english}{}\relax 
+\babel@toc {estonian}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{4}{section*.2}%
+\contentsline {section}{\numberline {2}Andmejälgija}{6}{section*.3}%
+\contentsline {subsection}{\numberline {2.1}The protocol}{6}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Usage}{7}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Adoption}{7}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Overview of state databases}{9}{section*.4}%
+\contentsline {subsection}{\numberline {3.1}Databases implementing Andmejälgija}{9}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Databases providing other form of data access tracking}{10}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Databases not providing any kind of data access tracking}{10}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Raw access logs vs Andmejälgija}{11}{section*.5}%
+\contentsline {section}{\numberline {5}Implementation}{11}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Description}{11}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Discussion of implementation choice}{11}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}X-Road service}{11}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Standalone approach}{11}{subsubsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.3}User guide}{12}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Software distribution}{12}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Known problems}{12}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Conclusion}{12}{section.6}%
+\contentsline {section}{\numberline {7}Discussion}{12}{section.7}%
+\contentsline {section}{References}{13}{section*.6}%
+\contentsline {section}{License}{14}{section*.7}%
+\contentsfinish 

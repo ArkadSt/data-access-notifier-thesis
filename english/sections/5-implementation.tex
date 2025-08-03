@@ -1,0 +1,30 @@
+\section{Implementation}
+
+\subsection{Description}
+
+One of the objectives of this thesis has been to develop a notifier for Andmejälgija data. I decided to create a mobile app for that.
+
+\subsection{Discussion of implementation choice}
+In addition to mobile app, there are other ways to develop such a solution. In this section I will discuss alternatives, as well as why I eventually decided to settle with the current approach
+
+\subsubsection{X-Road service}
+Andmejälgija specifications requires databases to implement an X-Road interface, as described in \ref{protocol_desc}, so one option would be to create an X-Road service that would query Andmejälgija data over X-Road. The main advantage of this approach would be the freedom on how to notify the users of changes to the access logs. The service could support various channels of communication, including instant messenger bots, e-mail and others. The list of requirements in order to operate such a service is daunting, however. 
+
+\begin{itemize}
+    \item {In order to join X-Road, legal entity is needed}
+    \item {Permission has to be requested from every X-Road service you want to query data from}
+    \item {As part of X-Road network, you need to operate a Security Server. It can be self-hosted anywhere for testing, but for production you need to have a Hardware Security Module (HSM), that costs around 10000€ (or >200€/month rent)}
+\end{itemize}
+
+Satisfying this criteria is difficult and expensive. Additionally, even if I succeeded, that would make me a data controller and force people using my service to trust me with their data. That's whi prefer the standalone approach.
+
+\subsubsection{Standalone approach}
+This approach uses Eesti.ee session for accessing Andmejälgija data. Once you are logged in on Eesti.ee, certain internal API endpoints become available. Namely GET https://www.eesti.ee/andmejalgija/api/v1/usages endpoint can be used to query Andmejälgija data. The endpoint requires a parameter dataSystemCodes with which specific databases can be specified. For example GET request /usages?dataSystemCodes=digiregistratuur\&dataSystemCodes=rahvastikuregister would request access logs from Digiregistratuur and Rahvastikuregister.
+
+The main advantage of this approach is the abscence of all disadvantages of the X-Road approach: there is no need for any kind of bureaucracy and the solution could be an open-source project, available for anybody to compile and use. There arises a problem, however. What about the notification part? Do I expect users to set everything up on their hardware, including relevant communication channels? That would narrow down the project's user base to technical people knowing how to self-host, and having a server.
+
+That's why I thought that creating a mobile app would be the most optimal approach. The app would run the eesti.ee session and poll the API. This approach would combine the ease of setting up and use with solution remaining standalone, without a central server.
+
+\subsection{User guide}
+\subsection{Software distribution}
+\subsection{Known problems}
