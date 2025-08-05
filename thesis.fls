@@ -320,15 +320,13 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr5.tfm
 INPUT ./english/sections/2-data-tracker-desc.tex
 INPUT ./english/figures/aj_model.PNG
 INPUT ./english/figures/aj_model.PNG
-INPUT ./english/figures/bad_aj_desc.png
-INPUT ./english/figures/bad_aj_desc.png
-INPUT ./english/figures/aj_good_and_bad_practices.png
-INPUT ./english/figures/aj_good_and_bad_practices.png
 INPUT ./english/sections/3-state-databases-overview.tex
 INPUT ./english/figures/e-toimik.png
 INPUT ./english/figures/e-toimik.png
 INPUT ./english/sections/4-raw-vs-andmejälgija.tex
 INPUT ./english/sections/5-implementation.tex
+INPUT ./english/figures/Screenshot from 2025-08-04 19-37-39.png
+INPUT ./english/figures/Screenshot from 2025-08-04 19-37-39.png
 INPUT ./english/sections/4-conclusion.tex
 INPUT ./english/sections/discussion.tex
 INPUT ./english/sections/11-license.tex
