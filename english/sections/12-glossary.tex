@@ -1,0 +1,49 @@
+\section{Glossary}
+
+\subsection{Estonian Government and Technology Terms}
+
+\begin{description}
+    \item[\textit{Andmejälgija}] Data Tracker - Protocol developed by RIA for tracking personal data access across state databases.
+    
+    \item[\textit{eesti.ee}] Official Estonian state portal providing access to various government e-services.
+    
+    \item[\textit{TARA}] Trusted Authentication and Authorization service - Estonian government service that handles initial user authentication using strong authentication methods (ID-card, Mobile-ID, Smart-ID, EU eID).
+    
+    \item[\textit{GovSSO}] Government Single Sign-On service - manages session state and enables users to access multiple Estonian government e-services with a single authentication. Works in conjunction with TARA to provide seamless access across government platforms.
+    
+    \item[\textit{Digiregistratuur}] Digital patient registry system in Estonia.
+    
+    \item[\textit{Rahvastikuregister}] Estonian Population Register containing basic demographic information.
+    
+    \item[\textit{E-File}] The E-File is a central information system that provides an overview of the different phases of criminal, civil, administrative and misdemeanour proceedings, procedural acts and court adjudications to all the parties involved, including the citizen and their representatives.\cite{e-file-rik} Includes the data access tracker for Criminal Records Database. 
+    
+    \item[RIA] \textit{Riigi Infosüsteemi Amet} - Information System Authority, the Estonian government agency responsible for information systems.
+    
+    \item[X-Road] Estonian data exchange platform that enables secure data exchange between information systems.
+    
+    \item[eIDAS] Electronic Identification, Authentication and Trust Services - EU regulation for electronic identification and trust services.
+\end{description}
+
+\subsection{Android Development Terms}
+
+\begin{description}
+    \item[AlarmManager] Android system service for scheduling operations to be executed at specific times.
+    
+    \item[WorkManager] Android Jetpack library for deferrable, guaranteed background work. Uses JobScheduler for API 23+, and AlarmManager + BroadcastReceiver for API 14-22. Automatically chooses the best execution method based on Android version and system constraints \cite{android-workmanager}.
+    
+    \item[Foreground Service] Android service that runs in the background but displays a persistent notification to the user, making the user aware of the ongoing operation. Despite running in the background, it's called "foreground" because it maintains user visibility through the notification.
+    
+    \item[Background Service] Android service that runs without user awareness and without displaying notifications. These services are heavily restricted by the system to preserve battery life and system performance.
+    
+    \item[WebView] Android component that displays web content within an application.
+    
+    \item[OkHttp] HTTP client library for Android and Java applications.
+    
+    \item[Proto Data Store] Android library for storing typed objects using protocol buffers.
+    
+    \item[Doze Mode] Android power-saving feature that defers background CPU and network activity for applications.
+    
+    \item[APK] Android Package - file format used to distribute and install applications on Android.
+    
+    \item[JWT] JSON Web Token - method for transmitting information between parties as a signed JSON object.
+\end{description}

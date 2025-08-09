@@ -1,1 +1,13 @@
 \section{Discussion}
+
+While an initial solution has been successfully implemented, there remains considerable scope for further development and enhancement.
+
+\subsection{Future Development Opportunities}
+
+Several potential approaches could address the current 12-hour session limitation by exploring alternative authentication flows and API endpoints. One avenue for investigation would involve reverse-engineering the official eesti.ee Android application to analyze its authentication mechanisms, for example by decompiling it's APK and studying the resulting source code. The application is known to support biometric authentication with PIN code fallback functionality. Through proper reverse engineering and reimplementation of these authentication flows, it may be theoretically possible to automate PIN code resubmission and maintain indefinite session validity.
+
+However, such an approach would constitute a substantial undertaking that could warrant a separate research project. Additionally, this method would likely introduce significantly greater implementation complexity compared to the current solution, potentially making it more fragile and maintenance-intensive.
+
+\subsection{Optimal Solution}
+
+The most effective solution would be for RIA (Information System Authority) to implement equivalent functionality directly within the eesti.ee platform. Such an official implementation would be relatively straightforward to develop and would provide superior reliability and future-proofing compared to any third-party solution, including the one presented in this thesis.
