@@ -180,7 +180,7 @@ Initially, I hypothesized that this limitation was related to the JWT token issu
 \label{fig:eesti-ee-continue-session}
 \end{figure}
 
-However, after experimenting with this method, I discovered that the 12-hour limitation applies to a different token than initially expected. The time validation is not performed on the client-side JWT token that the application receives, but rather on a master server-side JWT token that is created during the initial \textit{TARA} authentication process (ID-card, Mobile-ID, Smart-ID, etc.) and managed by \textit{GovSSO}.
+However, after experimenting with this method, I discovered that the 12-hour limitation applies to a different token than initially expected. The time validation is not performed on the client-side JWT token that the application receives, but rather on a server-side master JWT token that is created during the initial \textit{TARA} authentication process (ID-card, Mobile-ID, Smart-ID, etc.) and managed by \textit{GovSSO}.
 
 When a user logs into additional services using the single-sign-on functionality, these secondary sessions are all linked to the same original server-side JWT token managed by \textit{GovSSO}. This architecture means that regardless of which session extension method is used, the 12-hour limit cannot be circumvented because all sessions share the same underlying authentication token that expires after 12 hours.
 
@@ -227,6 +227,33 @@ After installation and opening for the first time, the \textbf{Data Access Notif
 Once the necessary permissions are given, the Log In screen appears. When Log In button is pressed, an Android WebView is opened, redirecting the user to \textit{TARA} Log In screen. There user is free to choose whatever state authentication option they choose.
 
 And that's it! As soon as authentication is successfully completed, you will start receiving notifications as soon as there are any new data access logs returned from the server. There is also a view inside of the application showing all data access logs saved.
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{english/figures/Screenshot_20250810_154333_Data Access Notifier.jpg}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{english/figures/Screenshot_20250810_154342_Data Access Notifier.jpg}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{english/figures/Screenshot_20250810_154411_Data Access Notifier.jpg}
+\end{minipage}
+\caption{Authentication to Data Access Notifier}
+\label{fig:app-usage}
+\end{figure} 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=250px]{english/figures/Screenshot_20250801_133754_Signal.jpg}
+\caption{Data access notification}
+\label{fig:data-access-notification}
+\end{figure}
 
 \subsection{Observations while using \textbf{Data Access Notifier}}
 
