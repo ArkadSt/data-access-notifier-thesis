@@ -5,24 +5,24 @@
 The main objective of this thesis has been to develop a solution that would notify users of data access events logged in the \textit{Andmejälgija} (Data Tracker) system. The resulting solution provides near real-time notifications when government institutions or other authorized entities access an eID holder's personal data.
 
 \subsection{Discussion of implementation choice}
-There are several possible approaches for developing such a solution. In this section I will discuss different implementation options and their advantages and disadvantages.
+There are several possible approaches for developing such a solution. In this section I will discuss different implementation options as well as their advantages and disadvantages.
 
 \subsubsection{X-Road service}
-\textit{Andmejälgija} specifications require databases to implement an X-Road interface, as described in \ref{protocol_desc}, so one option would be to create an X-Road service that would query \textit{Andmejälgija} data over X-Road. The main advantage of this approach would be the freedom in how to notify users of changes to the access logs. The service could support various communication channels, including instant messenger bots, e-mail and others. However, the list of requirements to operate such a service is daunting. 
+\textit{Andmejälgija} specifications require entities responsible for the state databases to implement an X-Road interface themselves, as described in \ref{protocol_desc}, so one option would be to create an X-Road service that would query \textit{Andmejälgija} data over X-Road directly from those entities. The main advantage of this approach would be the freedom in how to notify users of changes to the access logs. The service could support various communication channels, including instant messenger bots, e-mail and others. However, the list of requirements to operate such a service is daunting. 
 
 \begin{itemize}
     \item {In order to join X-Road, legal entity is needed.}
-    \item {Permission has to be requested from every X-Road service you want to query data from. Specifically, considering that each information system is responsible for implementing the \textit{Andmejalgija} protocol themselves, the permission would be required from each entity responsible for the information systems from which the access logs would be requested.}
+    \item {Permission has to be requested from every X-Road service you want to query data from. Specifically, considering that each information system is responsible for implementing the \textit{Andmejälgija} protocol themselves, the permission would be required from each entity responsible for the information systems from which the access logs would be requested.}
     \item {As part of X-Road network, you need to operate a Security Server. It can be self-hosted anywhere for testing, but for production you need to have a Hardware Security Module (HSM), in order to be compliant with eIDAS requirements. For example, a Thales Luna PCIe HSM A700 suitable for eIDAS qualified digital signing costs €8,990 (€10,877.90 incl. VAT) \cite{thales-luna-hsm-pricing}. Alternatively, renting a production ready Security server from Telia costs 210€ per month \cite{telia-xroad-server}}
-    \item {Finally, considering that this would be about creating a service that would store and transmit user's data, it would be required to follow strict regulatory requirements including GDPR. Staying compliant requires a continuous effort, and in case of failure to do so, there are harsh fines.}
+    \item {Finally, considering that this approach would include creating a service that would store and transmit user's data, it would be required to follow strict regulatory requirements including GDPR. Staying compliant requires a continuous effort, and in case of failure to do so, there are harsh fines.}
 \end{itemize}
 
-Satisfying this criteria is difficult and expensive. Additionally, even if I succeeded, people would have to consent and entrust me with their data in order to be able to use the solution, which is not in the spirit of screating a solution for monitoring personal data access as another data controller would be introduced.
+Satisfying this criteria is difficult and expensive. Additionally, even if I succeeded, people would have to consent and entrust me with their data in order to be able to use the solution, which is not in the spirit of creating a solution for monitoring personal data access as another data controller would be introduced.
 
 \subsubsection{Standalone approach}
 This approach uses the \textit{eesti.ee} session for accessing \textit{Andmejälgija} data. Once the user is logged in to the \textit{eesti.ee} state portal, certain internal API endpoints become available. Namely the \texttt{GET} endpoint \texttt{https://www.eesti.ee/\\andmejalgija/api/v1/usages} can be used to query \textit{Andmejälgija} data. The endpoint requires a parameter \texttt{dataSystemCodes} with which specific databases can be specified. For example, the GET request \texttt{/usages?dataSystemCodes=digiregistratuur\&\\dataSystemCodes=rahvastikuregister} would request access logs from \textit{Digiregistratuur} and \textit{Rahvastikuregister}.
 
-The main advantage of this approach is the abscence of all disadvantages of the X-Road approach: there is no need for any kind of bureaucracy and the solution could be an open-source project, available for anybody to compile and use. There arises a problem, however. What about the notification part? Do I expect users to set everything up on their hardware, including relevant communication channels? That would narrow down the project's user base to technical people knowing how to self-host, and having a server.
+The main advantage of this approach is the absence of all disadvantages of the X-Road approach: there is no need for any kind of bureaucracy and the solution could be an open-source project, available for anybody to compile and use. There arises a problem, however. What about the notification part? Do I expect users to set everything up on their hardware, including relevant communication channels? That would narrow down the project's user base to technical people knowing how to self-host, and having a server.
 
 That's why I thought that creating a mobile application would be the most optimal approach. A mobile application would keep the \textit{eesti.ee} session alive and poll the \textit{Andmejälgija} API. This approach combines ease of setup and use while keeping the solution standalone, without requiring a central server.
 
@@ -49,7 +49,7 @@ The application is compatible with all Android versions starting from Android 8.
 
 The software is open-source, licensed under the MIT license.
 
-Currently, the application support is limited to Android 8.1 and higher. While support for iOS and other platforms is not planned due to limited development time and resources, the author would like to encourage anyone who would deem this solution useful to port it to platforms other than Android
+Currently, the application support is limited to Android 8.1 and higher. While support for iOS and other platforms is not planned due to limited development time and resources, anybody who deems this solution useful is encouraged to port it to platforms other than Android
 
 \subsubsection{Authentication}
 To gain access to \textit{eesti.ee} internal APIs, the user needs to be authenticated via \textit{TARA}. My initial plan was to reverse engineer the authentication flow and authenticate the user by sending raw HTTP requests and returning responses. This approach, however, would be fragile and require substantial engineering effort to develop and maintain.
@@ -131,7 +131,7 @@ The most appropriate foreground service type for my use case is dataSync, meanin
 
 \subsubsection{Hybrid AlarmManager approach}
 \label{alarmmanager-approach}
-After evaluating the limitations of WorkManager and the restrictions on foreground services, I ultimately settled on a hybrid approach combining AlarmManager with a dataSync foreground service. AlarmManager is a system service that allows scheduling operations to be executed at specific times, even if the application is not running. By using AlarmManager to trigger the application at regular intervals (e.g., every 5 minutes), I ensure that the session renewal and data polling tasks are reliably executed.
+After evaluating the limitations of WorkManager and the restrictions on foreground services, I ultimately settled on a hybrid approach combining AlarmManager with a dataSync foreground service. AlarmManager is a system service that allows scheduling operations to be executed at specific times, even if the application is not running. By using AlarmManager to trigger the application at regular intervals (e.g., every 5 minutes), it is ensured that the session renewal and data polling tasks are reliably executed.
 
 When the alarm fires, the application starts a short-lived dataSync foreground service to perform the necessary network operations: refreshing the JWT token and querying the \textit{Andmejälgija} API. This approach leverages the reliability of foreground services for critical tasks while minimizing battery usage by only running the service when needed. AlarmManager itself is not subject to aggressive background restrictions and can wake the application even in Doze mode, making it suitable for periodic tasks.
 
@@ -256,6 +256,7 @@ And that's it! As soon as authentication is successfully completed, you will sta
 \end{figure}
 
 \subsection{Observations while using \textbf{Data Access Notifier}}
+\label{observations}
 
 While using the \textbf{Data Access Notifier} application over several weeks, I made several interesting observations about the behavior of the \textit{Andmejälgija} API and the reliability of real-time access logging.
 

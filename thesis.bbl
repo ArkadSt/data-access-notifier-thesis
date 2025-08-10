@@ -126,7 +126,7 @@
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Screenshots taken from the Estonian E-File System (E-toimik) showing data access tracking interface, used under fair use for educational purposes}
+      \field{note}{Screenshots taken from the Estonian E-File System (E-toimik) showing data access tracking interface}
       \field{title}{E-File System Screenshots}
       \field{year}{2025}
     \endentry
@@ -436,7 +436,7 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Screenshots taken from the Estonian state portal (eesti.ee) showing GovSSO session management interface, used under fair use for educational purposes}
+      \field{note}{Screenshots taken from the Estonian state portal (eesti.ee) showing GovSSO session management interface}
       \field{title}{eesti.ee Portal Screenshots}
       \field{year}{2025}
     \endentry
@@ -457,7 +457,7 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{JavaScript code excerpt used under fair use for educational purposes}
+      \field{note}{JavaScript code excerpt}
       \field{title}{eesti.ee - Estonian State Portal}
       \field{urlday}{9}
       \field{urlmonth}{8}

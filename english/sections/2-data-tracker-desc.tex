@@ -2,11 +2,11 @@
 
 \subsection{The protocol} \label{protocol_desc}
 
-Andmejälgija is a protocol that state databases are responsible for implementing themselves. In order for the database to offer an Andmejälgija service, they have to create an X-Road interface according to RIA specification\footnote{\url{https://github.com/e-gov/AJ/blob/master/doc/spetsifikatsioonid/Kasutusteabe_esitamise_protokoll.md}}. 
+Andmejälgija is a protocol that state databases are responsible for implementing themselves. In order for the database to offer an \textit{Andmejälgija} service, they have to create an X-Road interface according to RIA specification\footnote{\url{https://github.com/e-gov/AJ/blob/master/doc/spetsifikatsioonid/Kasutusteabe_esitamise_protokoll.md}}. 
 
 X-Road is a REST-based protocol which is used for secure data exchange between Estonian information systems over the Internet.
 
-The Andmejälgija X-Road interface is expected to have the following endpoints:
+The \textit{Andmejälgija} X-Road interface is expected to have the following endpoints:
 
 \textbf{findUsage}
 
@@ -23,21 +23,21 @@ Requesting the availability status of the tracker's usage information.\cite{aj-g
 \begin{figure}[H]
 \centering
 \includegraphics[width=450px]{english/figures/aj_model.PNG}
-\caption{\textit{Andmejälgija} (Data Tracker) system architecture showing the interaction between entities implementing data tracking and eesti.ee data tracker view. The data exchange happens via X-Road.}
+\caption{\textit{Andmejälgija} (Data Tracker) system architecture showing the interaction between entities implementing data tracking and \textit{eesti.ee} data tracker view. The data exchange happens via X-Road.}
 \label{fig:aj-model}
 \end{figure}
 
 \subsection{Usage}
-There are several ways for end-users to access their Data Tracker data. State portal eesti.ee provides a web-view for Andmejälgija where end users can access their data access logs. Recently, RIA have also published a mobile app for eesti.ee, that also features a view of data access logs. 
+There are several ways for end-users to access their Data Tracker data. State portal \textit{eesti.ee} provides a web-view for \textit{Andmejälgija} where end users can access their data access logs. Recently, RIA have also published a mobile app for \textit{eesti.ee}, that also features a view of data access logs. 
 
 Another way to access Data tracker data is through Estonian Population Registry, although, is seems to be Population Registry specific as it doesn't provide access logs from other databases
 
 
 
 \subsection{Adoption}
-The current adoption of Andmejälgija has some noticable issues. Very often it is not at all clear why your data have been accessed, at least from the first glance. Explanation messages are vague and confusing, often being similar to "data access by personal code", making it difficult to understand the reason behind the data access, even if it was you who accessed it.
+The current adoption of \textit{Andmejälgija} has some noticeable issues. Very often it is not at all clear why your data have been accessed, at least from the first glance. Explanation messages are vague and confusing, often being similar to "data access by personal code", making it difficult to understand the reason behind the data access, even if it was you who accessed it.
 
-There is even an information sheet with recommendations for services implementing the Andmejälgija protocol, and it states that providing poor quality explanations for data access is a bad practice.\footnote{\url{https://www.ria.ee/sites/default/files/documents/2022-11/Soovitusi-Andmejalgija-rakendamiseks.pdf}} 
+There is even an information sheet with recommendations for services implementing the \textit{Andmejälgija} protocol, and it states that providing poor quality explanations for data access is a bad practice.\footnote{\url{https://www.ria.ee/sites/default/files/documents/2022-11/Soovitusi-Andmejalgija-rakendamiseks.pdf}} 
 
 \textbf{Good practice example:}
 
@@ -49,7 +49,7 @@ There is even an information sheet with recommendations for services implementin
 \hline
 13.01.2015 10:20:27 & Prescription viewed by doctor; prescription number 1018472350 & Doctor Viktor Pihlakas \\
 \hline
-19.01.2018 10:58:23 & Individual query for valid driver's licenses through state portal eesti.ee & Jaan Kask 32405023456 \\
+19.01.2018 10:58:23 & Individual query for valid driver's licenses through state portal \textit{eesti.ee} & Jaan Kask 32405023456 \\
 \hline
 \end{tabular}
 \caption{Example of good data access descriptions}
@@ -89,6 +89,6 @@ Apparently, the advice is often ignored, as many institutions tend to follow the
 \caption{Extract from author's data tracker view demonstrating poor quality descriptions}
 \end{table}
 
-Furthermore, currently there is no law requiring institutions to implement the Andmejälgija protocol, meaning that its use is pretty much voluntary.
+Furthermore, currently there is no law requiring institutions to implement the \textit{Andmejälgija} protocol, meaning that its use is pretty much voluntary.
 
-In the following chapters I will cover different state databases and their implementations of Andmejälgija, and whether they implement the protocol at all.
+In the following chapters I will cover different state databases and their implementations of \textit{Andmejälgija}, and whether they implement the protocol at all.
