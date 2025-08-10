@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber thesis"] 1754834450.47102 "thesis.bcf" "thesis.bbl" "thesis" 1754835758.61804 0
+["biber thesis"] 1754836091.87378 "thesis.bcf" "thesis.bbl" "thesis" 1754836250.80701 0
   "english/references.bib" 1754834520.63953 5317 81f9de526c5a962b2c4489d86c05dd46 ""
-  "thesis.bcf" 1754835758.26774 109317 577dc7996145207ea0ca223a26784143 "pdflatex"
+  "thesis.bcf" 1754836250.42229 109393 24f90f8ce52513cad5cac7c4374a18ca "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["pdflatex"] 1754835753.44173 "/home/arkadi/Desktop/data-access-notifier-thesis/thesis.tex" "thesis.pdf" "thesis" 1754835758.61889 0
+["pdflatex"] 1754836246.23997 "/home/arkadi/Desktop/data-access-notifier-thesis/thesis.tex" "thesis.pdf" "thesis" 1754836250.80744 0
   "/home/arkadi/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/arial-bold-italic.luc" 1754234213.30503 101126 c4d5453b66dd5dac21ca2aacf72cabb2 ""
   "/home/arkadi/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/arial.luc" 1754234213.27003 141416 fa6ddd807eec1129214ac1cecce59705 ""
   "/home/arkadi/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/arialbd.luc" 1754234213.34403 142004 8ea639a6eddc39f8ec50572c26672081 ""
@@ -315,13 +315,13 @@
   "english/sections/2-data-tracker-desc.tex" 1754835748.43073 4947 60dc96ec8c4ea6eda419ea121d8f5002 ""
   "english/sections/3-state-databases-overview.tex" 1754835757.60074 5891 904f59d4fac1d269059e4e88c091b60e ""
   "english/sections/4-conclusion.tex" 1754834657.51792 463 564e8ed29b3955f047b887f38a764d31 ""
-  "english/sections/5-implementation.tex" 1754835244.02206 30832 6f61fcf9ee512eff756d1abe88645e1d ""
-  "english/sections/discussion.tex" 1754831646.73726 1602 80efca1eae1a7ff883f75e8c74b3e7d6 ""
-  "thesis.aux" 1754835758.22774 34602 8daa3050f5724e0e8c0f435916f94b94 "pdflatex"
-  "thesis.bbl" 1754834451.3743 25933 8cbf02258f07aadb26475f14d7fde4ba "biber thesis"
-  "thesis.run.xml" 1754835758.26974 2730 d3ed3c0e96f499d8a6981e59a3cd9f44 "pdflatex"
+  "english/sections/5-implementation.tex" 1754836241.74528 31832 26faed615636aadb62f7c7f726059dc8 ""
+  "english/sections/discussion.tex" 1754835971.35798 1602 80efca1eae1a7ff883f75e8c74b3e7d6 ""
+  "thesis.aux" 1754836250.38329 35635 117379df4c55e4986c3d2263d0615792 "pdflatex"
+  "thesis.bbl" 1754836092.91812 25933 ce6f056736b8a7ac7e458770519037ae "biber thesis"
+  "thesis.run.xml" 1754836250.42329 2730 d3ed3c0e96f499d8a6981e59a3cd9f44 "pdflatex"
   "thesis.tex" 1754224098 835 c00648b5a93a03d8f88f37472ed36ae1 ""
-  "thesis.toc" 1754835758.26974 3832 b7bd6c5ac9ae92a27a8b0d1e4225791f "pdflatex"
+  "thesis.toc" 1754836250.42329 3992 9209cd2e7f657260e3c6e723ad7e6840 "pdflatex"
   "unitartucs/citations/biblatex.bbx" 1754224098 1045 1534c5b130305b46848aaf035783420e ""
   "unitartucs/citations/biblatex.cbx" 1754224098 409 47fc3861c2be2cc2b3214f259e339dfe ""
   "unitartucs/citations/numeric.bbx" 1754224098 280 1ec600b6a289888f93cb05e4a7a6303b ""
