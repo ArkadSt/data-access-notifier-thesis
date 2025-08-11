@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{private}\PYG{+w}{ }\PYG{k+kt}{boolean}\PYG{+w}{ }\PYG{n+nf}{isNbfValid}\PYG{p}{(}\PYG{n}{JWT}\PYG{+w}{ }\PYG{n}{idToken}\PYG{p}{)}\PYG{+w}{ }\PYG{k+kd}{throws}\PYG{+w}{ }\PYG{n}{ParseException}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{Date}\PYG{+w}{ }\PYG{n}{idTokenDate}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{idToken}\PYG{p}{.}\PYG{n+na}{getJWTClaimsSet}\PYG{p}{().}\PYG{n+na}{getNotBeforeTime}\PYG{p}{();}
+\PYG{+w}{    }\PYG{n}{Date}\PYG{+w}{ }\PYG{n}{currentDate}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Date}\PYG{p}{();}
+\PYG{+w}{    }\PYG{k+kt}{long}\PYG{+w}{ }\PYG{n}{diffInMillis}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Math}\PYG{p}{.}\PYG{n+na}{abs}\PYG{p}{(}\PYG{n}{currentDate}\PYG{p}{.}\PYG{n+na}{getTime}\PYG{p}{()}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}
+\PYG{+w}{                                        }\PYG{n}{idTokenDate}\PYG{p}{.}\PYG{n+na}{getTime}\PYG{p}{());}
+\PYG{+w}{    }\PYG{k+kt}{long}\PYG{+w}{ }\PYG{n}{diffInSeconds}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{TimeUnit}\PYG{p}{.}\PYG{n+na}{SECONDS}\PYG{p}{.}\PYG{n+na}{convert}\PYG{p}{(}\PYG{n}{diffInMillis}\PYG{p}{,}
+\PYG{+w}{                                        }\PYG{n}{TimeUnit}\PYG{p}{.}\PYG{n+na}{MILLISECONDS}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k+kt}{long}\PYG{+w}{ }\PYG{n}{maxDurationInSeconds}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{TimeUnit}\PYG{p}{.}\PYG{n+na}{SECONDS}\PYG{p}{.}\PYG{n+na}{convert}\PYG{p}{(}
+\PYG{+w}{        }\PYG{n}{ssoConfigurationProperties}\PYG{p}{.}\PYG{n+na}{getSessionMaxDurationHours}\PYG{p}{(),}
+\PYG{+w}{        }\PYG{n}{TimeUnit}\PYG{p}{.}\PYG{n+na}{HOURS}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{diffInSeconds}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{n}{maxDurationInSeconds}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

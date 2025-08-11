@@ -65,6 +65,7 @@
       <file>biblatex.cfg</file>
       <file>english.lbx</file>
       <file>unitartucs/english.lbx</file>
+      <file>british.lbx</file>
       <file>estonian.lbx</file>
       <file>unitartucs/estonian.lbx</file>
     </requires>

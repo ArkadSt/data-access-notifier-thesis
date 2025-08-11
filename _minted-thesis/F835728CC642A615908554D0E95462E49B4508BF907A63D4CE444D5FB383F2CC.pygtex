@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{accountService}\PYG{p}{.}\PYG{n+nx}{getUserInfo}\PYG{p}{().}\PYG{n+nx}{subscribe}\PYG{p}{((}\PYG{n+nx}{o}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{filteredData}\PYG{p}{.}\PYG{n+nx}{data}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{filteredData}\PYG{p}{.}\PYG{n+nx}{data}\PYG{p}{.}\PYG{n+nx}{filter}\PYG{p}{(}
+\PYG{+w}{        }\PYG{p}{(}\PYG{n+nx}{d}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{o}{!}\PYG{n+nx}{d}\PYG{p}{.}\PYG{n+nx}{receiver}\PYG{p}{.}\PYG{n+nx}{toUpperCase}\PYG{p}{()}
+\PYG{+w}{                   }\PYG{p}{.}\PYG{n+nx}{includes}\PYG{p}{(}\PYG{n+nx}{o}\PYG{p}{.}\PYG{n+nx}{personalCode}\PYG{p}{.}\PYG{n+nx}{replace}\PYG{p}{(}\PYG{l+s+sr}{/\PYGZca{}EE/}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{p}{))}
+\PYG{+w}{    }\PYG{p}{);}
+\PYG{p}{\PYGZcb{})}
+\end{Verbatim}

@@ -2,23 +2,23 @@
 
 \subsection{The protocol} \label{protocol_desc}
 
-Andmejälgija is a protocol that state databases are responsible for implementing themselves. In order for the database to offer an \textit{Andmejälgija} service, they have to create an X-Road interface according to RIA specification\footnote{\url{https://github.com/e-gov/AJ/blob/master/doc/spetsifikatsioonid/Kasutusteabe_esitamise_protokoll.md}}. 
+Andmejälgija is a protocol that state databases are responsible for implementing themselves. In order for the database to offer an \textit{Andmejälgija} service, they have to create an X-Road interface according to RIA specification\cite{aj-github-spec}. 
 
 X-Road is a REST-based protocol which is used for secure data exchange between Estonian information systems over the Internet.
 
 The \textit{Andmejälgija} X-Road interface is expected to have the following endpoints:
 
-\textbf{findUsage}
+\textbf{\texttt{findUsage}}
 
-A query searches the data recorder database for usage records that match the constraints given in the input. The output of the query returns all records found.\cite{aj-github-spec}
+A query searches the data recorder database for usage records that match the constraints given in the input. The output of the query returns all records found\cite{aj-github-spec}.
 
-\textbf{usagePeriod}
+\textbf{\texttt{usagePeriod}}
 
-The time period for which usage information can be requested.\cite{aj-github-spec}
+The time period for which usage information can be requested\cite{aj-github-spec}.
 
-\textbf{heartbeat}
+\textbf{\texttt{heartbeat}}
 
-Requesting the availability status of the tracker's usage information.\cite{aj-github-spec}
+Requesting the availability status of the tracker's usage information\cite{aj-github-spec}.
 
 \begin{figure}[H]
 \centering
@@ -28,7 +28,7 @@ Requesting the availability status of the tracker's usage information.\cite{aj-g
 \end{figure}
 
 \subsection{Usage}
-There are several ways for end-users to access their Data Tracker data. State portal \textit{eesti.ee} provides a web-view for \textit{Andmejälgija} where end users can access their data access logs. Recently, RIA have also published a mobile app for \textit{eesti.ee}, that also features a view of data access logs. 
+There are several ways for end-users to access their Data Tracker data. State portal \textit{eesti.ee} provides a web-view for \textit{Andmejälgija} where end users can access their data access logs. Recently, RIA have also published a mobile application for \textit{eesti.ee}, that also features a view of data access logs. 
 
 Another way to access Data tracker data is through Estonian Population Registry, although, is seems to be Population Registry specific as it doesn't provide access logs from other databases
 

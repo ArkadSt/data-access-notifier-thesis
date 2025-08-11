@@ -88,9 +88,12 @@ INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/luababel.def
 INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-estonian/estonian.ldf
 INPUT /usr/share/texlive/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-et.tex
 INPUT /usr/share/texlive/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-et.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-english/british.ldf
 INPUT /usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
-INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
-INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-en.ini
+INPUT /usr/share/texlive/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-en-gb.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-en-gb.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-british.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/locale/en/babel-en-GB.ini
 INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/locale/et/babel-estonian.tex
 INPUT /usr/share/texlive/texmf-dist/tex/generic/babel/locale/et/babel-et.ini
 INPUT /usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
@@ -276,8 +279,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ninecolors/ninecolors.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/british.lbx
 INPUT ./unitartucs/english.lbx
-INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 INPUT ./unitartucs/estonian.lbx
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/estonian.lbx
@@ -293,6 +296,8 @@ INPUT ./thesis.toc
 OUTPUT thesis.toc
 INPUT ./english/sections/1-introduction.tex
 INPUT ./english/sections/2-data-tracker-desc.tex
+INPUT ./english/figures/aj_model.PNG
+INPUT ./english/figures/aj_model.PNG
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
@@ -318,8 +323,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr5.tfm
-INPUT ./english/figures/aj_model.PNG
-INPUT ./english/figures/aj_model.PNG
 INPUT ./english/sections/3-state-databases-overview.tex
 INPUT ./english/figures/e-toimik.png
 INPUT ./english/figures/e-toimik.png
@@ -330,10 +333,23 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT ./english/sections/5-implementation.tex
-INPUT ./english/figures/Screenshot from 2025-08-04 19-37-39.png
-INPUT ./english/figures/Screenshot from 2025-08-04 19-37-39.png
+INPUT ./english/figures/Screenshot from 2025-08-11 22-58-16.png
+INPUT ./english/figures/Screenshot from 2025-08-11 22-58-16.png
+OUTPUT thesis.pyg
+INPUT ./_minted-thesis/default.pygstyle
+INPUT ./thesis.pyg
+INPUT ./_minted-thesis/624C0DD5144C68624B52663F7C9B3637623C793DB36552414504C9C599DEF330.pygtex
+OUTPUT thesis.pyg
+INPUT ./thesis.pyg
+INPUT ./_minted-thesis/6533DBD5DFD86620C26DF3D66A6D812CA04DAAA8EA6A9BDD98764D68DC47E3C5.pygtex
+OUTPUT thesis.pyg
+INPUT ./thesis.pyg
+INPUT ./_minted-thesis/D03DB6243DF53C8401FB4FB2213AE8FC98AC6650688363CDFA3DF2E4C7E54189.pygtex
 INPUT ./english/figures/Screenshot from 2025-08-08 20-37-42.png
 INPUT ./english/figures/Screenshot from 2025-08-08 20-37-42.png
+OUTPUT thesis.pyg
+INPUT ./thesis.pyg
+INPUT ./_minted-thesis/F835728CC642A615908554D0E95462E49B4508BF907A63D4CE444D5FB383F2CC.pygtex
 INPUT ./english/figures/Screenshot_20250810_154333_Data Access Notifier.jpg
 INPUT ./english/figures/Screenshot_20250810_154333_Data Access Notifier.jpg
 INPUT ./english/figures/Screenshot_20250810_154342_Data Access Notifier.jpg
