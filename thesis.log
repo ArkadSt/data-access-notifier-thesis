@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.8.3)  12 AUG 2025 21:53
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.8.3)  12 AUG 2025 22:46
  system commands enabled.
  file:line:error style messages enabled.
 **/home/arkadi/Desktop/data-access-notifier-thesis/thesis.tex
@@ -1519,7 +1519,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `CourierNew' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<english/figures/aj_model.PNG, id=180, 648.4225pt x 332.24126pt>
+<english/figures/aj_model.PNG, id=189, 648.4225pt x 332.24126pt>
 File: english/figures/aj_model.PNG Graphic file (type png)
 <use english/figures/aj_model.PNG>
 Package luatex.def Info: english/figures/aj_model.PNG  used on input line 27.
@@ -1531,7 +1531,7 @@ warning  (pdf backend): ignoring duplicate destination with the name 'section*.3
 ] (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 ) [7<./english/figures/aj_model.PNG>] [8]) (./english/sections/3-state-databases-overview.tex [9]
-<english/figures/e-toimik.png, id=223, 895.345pt x 408.52625pt>
+<english/figures/e-toimik.png, id=237, 895.345pt x 408.52625pt>
 File: english/figures/e-toimik.png Graphic file (type png)
 <use english/figures/e-toimik.png>
 Package luatex.def Info: english/figures/e-toimik.png  used on input line 37.
@@ -1541,7 +1541,7 @@ Package luatex.def Info: english/figures/e-toimik.png  used on input line 37.
 
 warning  (pdf backend): ignoring duplicate destination with the name 'section*.8'
 ]
-<english/figures/Screenshot from 2025-08-09 11-59-33.png, id=232, 723.70375pt x 572.1375pt>
+<english/figures/Screenshot from 2025-08-09 11-59-33.png, id=246, 723.70375pt x 572.1375pt>
 File: english/figures/Screenshot from 2025-08-09 11-59-33.png Graphic file (type png)
 <use english/figures/Screenshot from 2025-08-09 11-59-33.png>
 Package luatex.def Info: english/figures/Screenshot from 2025-08-09 11-59-33.png  used on input line 50.
@@ -1552,7 +1552,7 @@ Lua-only attribute luaul1 = 5 [13]) (./english/sections/5-implementation.tex [14
 
 warning  (pdf backend): ignoring duplicate destination with the name 'section*.12'
 ] [16]
-<english/figures/Screenshot from 2025-08-11 22-58-16.png, id=281, 1098.1025pt x 742.775pt>
+<english/figures/Screenshot from 2025-08-11 22-58-16.png, id=301, 1098.1025pt x 742.775pt>
 File: english/figures/Screenshot from 2025-08-11 22-58-16.png Graphic file (type png)
 <use english/figures/Screenshot from 2025-08-11 22-58-16.png>
 Package luatex.def Info: english/figures/Screenshot from 2025-08-11 22-58-16.png  used on input line 47.
@@ -1566,13 +1566,13 @@ Package hyperref Info: bookmark level for unknown listing defaults to 0 on input
  (./_minted-thesis/6533DBD5DFD86620C26DF3D66A6D812CA04DAAA8EA6A9BDD98764D68DC47E3C5.pygtex)
 \openout4 = thesis.pyg
  (./_minted-thesis/D03DB6243DF53C8401FB4FB2213AE8FC98AC6650688363CDFA3DF2E4C7E54189.pygtex) [23]
-<english/figures/Screenshot from 2025-08-08 20-37-42.png, id=338, 1060.96375pt x 559.08875pt>
+<english/figures/Screenshot from 2025-08-08 20-37-42.png, id=366, 1060.96375pt x 559.08875pt>
 File: english/figures/Screenshot from 2025-08-08 20-37-42.png Graphic file (type png)
 <use english/figures/Screenshot from 2025-08-08 20-37-42.png>
 Package luatex.def Info: english/figures/Screenshot from 2025-08-08 20-37-42.png  used on input line 189.
 (luatex.def)             Requested size: 451.68228pt x 238.02332pt.
  [24] [25<./english/figures/Screenshot from 2025-08-08 20-37-42.png>]
-<english/figures/Screenshot_20250812_212624_Data Access Notifier.jpg, id=357, 1084.05pt x 312.16624pt>
+<english/figures/Screenshot_20250812_212624_Data Access Notifier.jpg, id=385, 1084.05pt x 312.16624pt>
 File: english/figures/Screenshot_20250812_212624_Data Access Notifier.jpg Graphic file (type jpg)
 <use english/figures/Screenshot_20250812_212624_Data Access Notifier.jpg>
 Package luatex.def Info: english/figures/Screenshot_20250812_212624_Data Access Notifier.jpg  used on input line 206.
@@ -1580,54 +1580,54 @@ Package luatex.def Info: english/figures/Screenshot_20250812_212624_Data Access 
 
 \openout4 = thesis.pyg
  (./_minted-thesis/F835728CC642A615908554D0E95462E49B4508BF907A63D4CE444D5FB383F2CC.pygtex) [26<./english/figures/Screenshot_20250812_212624_Data Access Notifier.jpg>] [27]
-<english/figures/Screenshot_20250812_212139_Settings.jpg, id=381, 523.83624pt x 1084.53503pt>
+<english/figures/Screenshot_20250812_212139_Settings.jpg, id=411, 523.83624pt x 1084.53503pt>
 File: english/figures/Screenshot_20250812_212139_Settings.jpg Graphic file (type jpg)
 <use english/figures/Screenshot_20250812_212139_Settings.jpg>
 Package luatex.def Info: english/figures/Screenshot_20250812_212139_Settings.jpg  used on input line 257.
 (luatex.def)             Requested size: 144.95305pt x 300.10977pt.
-<english/figures/Screenshot_20250812_212153_Permission controller.jpg, id=382, 1084.05pt x 2113.8975pt>
+<english/figures/Screenshot_20250812_212153_Permission controller.jpg, id=412, 1084.05pt x 2113.8975pt>
 File: english/figures/Screenshot_20250812_212153_Permission controller.jpg Graphic file (type jpg)
 <use english/figures/Screenshot_20250812_212153_Permission controller.jpg>
 Package luatex.def Info: english/figures/Screenshot_20250812_212153_Permission controller.jpg  used on input line 262.
 (luatex.def)             Requested size: 144.95305pt x 282.65439pt.
-<english/figures/Screenshot_20250812_212555_Data Access Notifier.jpg, id=383, 1084.05pt x 2113.8975pt>
+<english/figures/Screenshot_20250812_212555_Data Access Notifier.jpg, id=413, 1084.05pt x 2113.8975pt>
 File: english/figures/Screenshot_20250812_212555_Data Access Notifier.jpg Graphic file (type jpg)
 <use english/figures/Screenshot_20250812_212555_Data Access Notifier.jpg>
 Package luatex.def Info: english/figures/Screenshot_20250812_212555_Data Access Notifier.jpg  used on input line 267.
 (luatex.def)             Requested size: 144.95305pt x 282.65439pt.
-<english/figures/Screenshot_20250812_212238_Data Access Notifier.jpg, id=384, 523.83624pt x 1085.5051pt>
+<english/figures/Screenshot_20250812_212238_Data Access Notifier.jpg, id=414, 523.83624pt x 1085.5051pt>
 File: english/figures/Screenshot_20250812_212238_Data Access Notifier.jpg Graphic file (type jpg)
 <use english/figures/Screenshot_20250812_212238_Data Access Notifier.jpg>
 Package luatex.def Info: english/figures/Screenshot_20250812_212238_Data Access Notifier.jpg  used on input line 271.
 (luatex.def)             Requested size: 144.95305pt x 300.37822pt.
-<english/figures/Screenshot_20250812_212306_Data Access Notifier.jpg, id=385, 523.83624pt x 1091.81053pt>
+<english/figures/Screenshot_20250812_212306_Data Access Notifier.jpg, id=415, 523.83624pt x 1091.81053pt>
 File: english/figures/Screenshot_20250812_212306_Data Access Notifier.jpg Graphic file (type jpg)
 <use english/figures/Screenshot_20250812_212306_Data Access Notifier.jpg>
 Package luatex.def Info: english/figures/Screenshot_20250812_212306_Data Access Notifier.jpg  used on input line 276.
 (luatex.def)             Requested size: 144.95305pt x 302.12303pt.
-<english/figures/Screenshot_20250812_212336_Data Access Notifier.jpg, id=386, 523.83624pt x 1088.4153pt>
+<english/figures/Screenshot_20250812_212336_Data Access Notifier.jpg, id=416, 523.83624pt x 1088.4153pt>
 File: english/figures/Screenshot_20250812_212336_Data Access Notifier.jpg Graphic file (type jpg)
 <use english/figures/Screenshot_20250812_212336_Data Access Notifier.jpg>
 Package luatex.def Info: english/figures/Screenshot_20250812_212336_Data Access Notifier.jpg  used on input line 281.
 (luatex.def)             Requested size: 144.95305pt x 301.18352pt.
  [28]
-<english/figures/Screenshot_20250801_133754_Signal.jpg, id=394, 1084.05pt x 520.94624pt>
+<english/figures/Screenshot_20250801_133754_Signal.jpg, id=424, 1084.05pt x 520.94624pt>
 File: english/figures/Screenshot_20250801_133754_Signal.jpg Graphic file (type jpg)
 <use english/figures/Screenshot_20250801_133754_Signal.jpg>
 Package luatex.def Info: english/figures/Screenshot_20250801_133754_Signal.jpg  used on input line 291.
 (luatex.def)             Requested size: 250.9346pt x 120.58617pt.
  [29<./english/figures/Screenshot_20250812_212139_Settings.jpg><./english/figures/Screenshot_20250812_212153_Permission controller.jpg><./english/figures/Screenshot_20250812_212555_Data Access Notifier.jpg><./english/figures/Screenshot_20250812_212238_Data Access Notifier.jpg><./english/figures/Screenshot_20250812_212306_Data Access Notifier.jpg><./english/figures/Screenshot_20250812_212336_Data Access Notifier.jpg>] [30<./english/figures/Screenshot_20250801_133754_Signal.jpg>] [31]
-<english/figures/IMG_20250809_225839_242.jpg, id=415, 1084.05pt x 2348.775pt>
+<english/figures/IMG_20250809_225839_242.jpg, id=446, 1084.05pt x 2348.775pt>
 File: english/figures/IMG_20250809_225839_242.jpg Graphic file (type jpg)
 <use english/figures/IMG_20250809_225839_242.jpg>
 Package luatex.def Info: english/figures/IMG_20250809_225839_242.jpg  used on input line 341.
 (luatex.def)             Requested size: 144.95305pt x 314.06044pt.
-<english/figures/IMG_20250809_225839_290.jpg, id=416, 1084.05pt x 2348.775pt>
+<english/figures/IMG_20250809_225839_290.jpg, id=447, 1084.05pt x 2348.775pt>
 File: english/figures/IMG_20250809_225839_290.jpg Graphic file (type jpg)
 <use english/figures/IMG_20250809_225839_290.jpg>
 Package luatex.def Info: english/figures/IMG_20250809_225839_290.jpg  used on input line 346.
 (luatex.def)             Requested size: 144.95305pt x 314.06044pt.
-<english/figures/IMG_20250809_225839_295.jpg, id=417, 1084.05pt x 2348.775pt>
+<english/figures/IMG_20250809_225839_295.jpg, id=448, 1084.05pt x 2348.775pt>
 File: english/figures/IMG_20250809_225839_295.jpg Graphic file (type jpg)
 <use english/figures/IMG_20250809_225839_295.jpg>
 Package luatex.def Info: english/figures/IMG_20250809_225839_295.jpg  used on input line 351.
@@ -1665,15 +1665,15 @@ Here is how much of LuaTeX's memory you used:
  125056,1977958 words of node,token memory allocated
  1585 words of node memory still in use:
    9 hlist, 3 vlist, 4 rule, 1 disc, 2 local_par, 10 glue, 4 kern, 2 penalty, 16 glyph, 229 attribute, 74 glue_spec, 110 attribute_list, 2 write, 15 pdf_action nodes
-   avail lists: 1:8,2:18420,3:1996,4:296,5:261,6:134,7:7048,8:163,9:665,10:27,11:482,12:1
+   avail lists: 1:9,2:18420,3:1996,4:302,5:259,6:135,7:7048,8:163,9:667,10:27,11:491,12:1
  61788 multiletter control sequences out of 65536+600000
  101 fonts using 14039263 bytes
  122i,11n,115p,1855b,4051s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/fonts/truetype/msttcorefonts/couri.ttf></usr/share/fonts/truetype/msttcorefonts/cour.ttf></usr/share/fonts/truetype/msttcorefonts/Times_New_Roman_Bold_Italic.ttf></usr/share/fonts/truetype/msttcorefonts/courbd.ttf></usr/share/fonts/truetype/msttcorefonts/Times_New_Roman_Italic.ttf></usr/share/fonts/truetype/msttcorefonts/arialbd.ttf></usr/share/fonts/truetype/msttcorefonts/Times_New_Roman_Bold.ttf></usr/share/fonts/truetype/msttcorefonts/Times_New_Roman.ttf>
-Output written on thesis.pdf (40 pages, 2763890 bytes).
+Output written on thesis.pdf (40 pages, 2765877 bytes).
 
-PDF statistics: 708 PDF objects out of 1000 (max. 8388607)
- 567 compressed objects within 6 object streams
+PDF statistics: 749 PDF objects out of 1000 (max. 8388607)
+ 605 compressed objects within 7 object streams
  133 named destinations out of 1000 (max. 131072)
  376 words of extra memory for PDF output out of 10000 (max. 100000000)
 

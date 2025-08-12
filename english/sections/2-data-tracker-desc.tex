@@ -20,17 +20,17 @@ The time period for which usage information can be requested\cite{aj-github-spec
 
 Requesting the availability status of the tracker's usage information\cite{aj-github-spec}.
 
-The overall architecture of the \textit{Andmejälgija} system is illustrated in Figure~\ref{fig:aj-model}, which shows how state databases interact with the \textit{eesti.ee} portal through X-Road to provide data access logs to end users.
+The overall architecture of the \textit{Andmejälgija} system is illustrated in Figure~\ref{fig:aj-model}, which shows how state databases interact with the \textit{\href{https://www.eesti.ee}{eesti.ee}} portal through X-Road to provide data access logs to end users.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=450px]{english/figures/aj_model.PNG}
-\caption{\textit{Andmejälgija} (Data Tracker) system architecture showing the interaction between entities implementing data tracking and \textit{eesti.ee} Data Tracker view. The data exchange happens via X-Road\cite{aj-github}.}
+\caption{\textit{Andmejälgija} (Data Tracker) system architecture showing the interaction between entities implementing data tracking and \textit{\href{https://www.eesti.ee}{eesti.ee}} Data Tracker view. The data exchange happens via X-Road\cite{aj-github}.}
 \label{fig:aj-model}
 \end{figure}
 
 \subsection{Usage}
-There are several ways for end-users to access their Data Tracker data. State portal \textit{eesti.ee} provides a web-view for \textit{Andmejälgija} where end users can access their data access logs. Recently, RIA have also published a mobile application for \textit{eesti.ee}, that also features a view of data access logs. 
+There are several ways for end-users to access their Data Tracker data. State portal \textit{\href{https://www.eesti.ee}{eesti.ee}} provides a web-view for \textit{Andmejälgija} where end users can access their data access logs. Recently, RIA have also published a mobile application for \textit{\href{https://www.eesti.ee}{eesti.ee}}, that also features a view of data access logs. 
 
 Another way to access Data tracker data is through Estonian Population Registry, although, is seems to be Population Registry specific as it doesn't provide access logs from other databases
 
@@ -51,7 +51,7 @@ There is even an information sheet with recommendations for services implementin
 \hline
 13.01.2015 10:20:27 & Prescription viewed by doctor; prescription number 1018472350 & Doctor Viktor Pihlakas \\
 \hline
-19.01.2018 10:58:23 & Individual query for valid driver's licenses through state portal \textit{eesti.ee} & Jaan Kask 32405023456 \\
+19.01.2018 10:58:23 & Individual query for valid driver's licenses through state portal \textit{\href{https://www.eesti.ee}{eesti.ee}} & Jaan Kask 32405023456 \\
 \hline
 \end{tabular}
 \caption{Example of good data access descriptions\cite{ria-andmejalgija-recommendations}}
@@ -96,4 +96,4 @@ Apparently, the advice is often ignored, as many institutions tend to follow the
 
 Furthermore, currently there is no law requiring institutions to implement the \textit{Andmejälgija} protocol, meaning that its use is essentially voluntary. This may change in the future, however, as the current coalition government formed by the Estonian Reform Party and Eesti 200 has promised to make the use of \textit{Andmejälgija} compulsory according to their coalition agreement\cite{coalition-agreement-2025-2027}.
 
-In the following chapters I will cover different state databases and their implementations of \textit{Andmejälgija}, and whether they implement the protocol at all.
+In the following chapter, different state databases and their implementations of \textit{Andmejälgija} will be covered, including whether they implement the protocol at all.

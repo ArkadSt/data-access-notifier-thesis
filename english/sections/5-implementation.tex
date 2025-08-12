@@ -5,7 +5,7 @@
 The main objective of this thesis has been to develop a solution that would notify users of data access events logged in the \textit{Andmejälgija} (Data Tracker) system. The resulting solution provides near real-time notifications when government institutions or other authorized entities access an eID holder's personal data.
 
 \subsection{Discussion of implementation choice}
-There are several possible approaches for developing such a solution. In this section I will discuss different implementation options as well as their advantages and disadvantages.
+There are several possible approaches for developing such a solution. In this section different implementation options will be discussed, as well as their advantages and disadvantages.
 
 \subsubsection{X-Road service}
 \textit{Andmejälgija} specifications require entities responsible for the state databases to implement an X-Road interface themselves, as described in \ref{protocol_desc}, so one option would be to create an X-Road service that would query \textit{Andmejälgija} data over X-Road directly from those entities. The main advantage of this approach would be the freedom in how to notify users of changes to the access logs. As a server-based solution, the service could support various communication channels for delivering notifications to users, including instant messenger bots or e-mail notifications, for example. However, the list of requirements to operate such a service is daunting. 
@@ -17,24 +17,24 @@ There are several possible approaches for developing such a solution. In this se
     \item {Finally, considering that this approach would include creating a service that would store and transmit user's data, it would be required to follow strict regulatory requirements including the General Data Protection Regulation (GDPR). Staying compliant requires a continuous effort, and in case of failure to do so, there are harsh fines.}
 \end{itemize}
 
-Satisfying this criteria is difficult and expensive. Additionally, even if I succeeded, people would have to consent and entrust me with their data in order to be able to use the solution, which is not in the spirit of creating a solution for monitoring personal data access as another data controller would be introduced.
+Satisfying this criteria is difficult and expensive. Additionally, even with successful implementation, people would have to consent and entrust me with their data in order to be able to use the solution, which is not in the spirit of creating a solution for monitoring personal data access, as another data controller would be introduced.
 
 \subsubsection{Standalone approach}
-This approach uses the \textit{eesti.ee} session for accessing \textit{Andmejälgija} data. Once the user is logged in to the \textit{eesti.ee} state portal, certain internal API endpoints become available. Namely the \texttt{GET} endpoint \texttt{https://www.eesti.ee/\\andmejalgija/api/v1/usages} can be used to query \textit{Andmejälgija} data. The endpoint requires a parameter \texttt{dataSystemCodes} with which specific databases can be specified. For example, the GET request \texttt{/usages?dataSystemCodes=digiregistratuur\&\\dataSystemCodes=rahvastikuregister} would request access logs from \textit{Digiregistratuur} and \textit{Rahvastikuregister}.
+This approach uses the \textit{\href{https://www.eesti.ee}{eesti.ee}} session for accessing \textit{Andmejälgija} data. Once the user is logged in to the \textit{\href{https://www.eesti.ee}{eesti.ee}} state portal, certain internal API endpoints become available. Namely the \texttt{GET} endpoint \texttt{https://www.\href{https://www.eesti.ee}{eesti.ee}/\\andmejalgija/api/v1/usages} can be used to query \textit{Andmejälgija} data. The endpoint requires a parameter \texttt{dataSystemCodes} with which specific databases can be specified. For example, the GET request \texttt{/usages?dataSystemCodes=digiregistratuur\&\\dataSystemCodes=rahvastikuregister} would request access logs from \textit{Digiregistratuur} and \textit{Rahvastikuregister}.
 
-The main advantage of this approach is the absence of all disadvantages of the X-Road approach: there are no legal requirements and the solution could be an open-source project, available for anybody to compile and use. There arises a problem, however. What about the notification part? Do I expect users to set everything up on their hardware, including relevant communication channels? That would narrow down the project's user base to technical people knowing how to self-host, and having a server.
+The main advantage of this approach is the absence of all disadvantages of the X-Road approach: there are no legal requirements and the solution could be an open-source project, available for anybody to compile and use. There arises a problem, however. What about the notification part? Are users expected to set everything up on their hardware, including relevant communication channels? That would narrow down the project's user base to technical people knowing how to self-host, and having a server.
 
-Consequently, creating a mobile application was determined to be the most optimal approach. A mobile application would keep the \textit{eesti.ee} session alive and poll the \textit{Andmejälgija} API. This approach combines ease of setup and use while keeping the solution standalone, without requiring a central server.
+Consequently, creating a mobile application was determined to be the most optimal approach. A mobile application would keep the \textit{\href{https://www.eesti.ee}{eesti.ee}} session alive and poll the \textit{Andmejälgija} API. This approach combines ease of setup and use while keeping the solution standalone, without requiring a central server.
 
 \subsection{Development}
 
-First, I had to determine how feasible and reliable the standalone approach would be, especially as I was dealing with a user-facing service that I would have to effectively reverse-engineer. The main challenge was to keep the session alive for as long as possible.
+First, the feasibility and reliability of the standalone approach had to be determined, especially as the approach would include a reverse-engineering of the user-facing service. The main challenge was to keep the session alive for as long as possible.
 
-The \textit{eesti.ee} session is established using one of the strong authentication methods via the \textit{TARA} (Trusted Authentication and Authorization) service. Once the user is authenticated using ID-card, Mobile-ID, Smart-ID, or eID solution of another EU country, a JSON Web Token (JWT) token is issued, valid for 30 minutes. The session management is then handled by \textit{GovSSO} (Government Single Sign-On), which maintains the master server-side session token and imposes certain limitations as discussed in \ref{session-limitations}.
+The \textit{\href{https://www.eesti.ee}{eesti.ee}} session is established using one of the strong authentication methods via the \textit{TARA} (Trusted Authentication and Authorization) service. Once the user is authenticated using ID-card, Mobile-ID, Smart-ID, or eID solution of another EU country, a JSON Web Token (JWT) token is issued, valid for 30 minutes. The session management is then handled by \textit{GovSSO} (Government Single Sign-On), which maintains the master server-side session token and imposes certain limitations as discussed in \ref{session-limitations}.
 
 Once the user is authenticated, certain internal API endpoints become available, including those for refreshing the JWT token and getting \textit{Andmejälgija} access logs. The JWT refresh endpoint returns \texttt{Set-Cookie} headers that include an updated \texttt{JWTTOKEN} on success, with an updated expiration date (30 minutes from the moment of extension).
 
-To test whether the session could be kept alive indefinitely, I used the Tab Reloader extension for Firefox by James Fray \cite{tab-reloader-addon}. Using this browser extension, I configured the browser to automatically reload the tab with the JWT token refresh endpoint. After an 8-hour experiment, I deemed the approach successful.
+To test whether the session could be kept alive indefinitely, the Tab Reloader extension for Firefox by James Fray \cite{tab-reloader-addon} was used. Using this browser extension, the browser was configured to automatically reload the tab with the JWT token refresh endpoint. After the 8-hour experiment, the approach was deemed successful.
 
 The next step was the development of the \textbf{Data Access Notifier} Android application. The reason why Android was chosen over iOS is that Android development is significantly more accessible for developers who do not own an Apple computer. Unlike iOS, Android development can be performed on nearly any modern computer with reasonably common operating system installed, including Linux, which I am a user of.
 
@@ -57,19 +57,19 @@ The \textbf{Data Access Notifier} application is released as open-source softwar
 The choice of MIT License aligns with the project's goal of providing a transparent and accessible solution for personal data monitoring, enabling the broader community to contribute to and benefit from the development efforts without strict licensing barriers.
 
 \subsubsection{Authentication}
-To gain access to \textit{eesti.ee} internal APIs, the user needs to be authenticated via the State Authentication Service (\textit{TARA}). My initial plan was to reverse engineer the authentication flow and authenticate the user by sending raw HTTP requests and handling responses. This approach, however, would be fragile and require substantial engineering effort to develop and maintain due to the flow being fairly complex and prone to unannounsed changes to \textit{TARA}.
+To gain access to \textit{\href{https://www.eesti.ee}{eesti.ee}} internal APIs, the user needs to be authenticated via the State Authentication Service (\textit{TARA}). My initial plan was to reverse engineer the authentication flow and authenticate the user by sending raw HTTP requests and handling responses. This approach, however, would be fragile and require substantial engineering effort to develop and maintain due to the flow being fairly complex and prone to unannounsed changes to \textit{TARA}.
 
-Instead, I decided to use Android WebView for authentication as a more reliable and convenient approach for both the user and the developer. By leveraging WebView, the \textbf{Data Access Notifier} application can present the official \textit{TARA} login page directly to the user, allowing them to authenticate using their preferred method (ID-card, Mobile-ID, Smart-ID, or eID of another EU country). This approach significantly reduces the risk of breaking changes due to updates on the \textit{eesti.ee} or \textit{TARA} platforms. Once the user is authenticated, the application can access the necessary session cookies and JWT token to interact with the internal APIs.
+Instead, it was decided to use Android WebView for authentication as a more reliable and convenient approach for both the user and the developer. By leveraging WebView, the \textbf{Data Access Notifier} application can present the official \textit{TARA} login page directly to the user, allowing them to authenticate using their preferred method (ID-card, Mobile-ID, Smart-ID, or eID of another EU country). This approach significantly reduces the risk of breaking changes due to updates on the \textit{\href{https://www.eesti.ee}{eesti.ee}} or \textit{TARA} platforms. Once the user is authenticated, the application can access the necessary session cookies and JWT token to interact with the internal APIs.
 
-\subsubsection{Interacting with \textit{eesti.ee} internal APIs}
-For interacting with \textit{eesti.ee} internal APIs, I used the OkHttp library by Square, Inc\cite{okhttp-library}. I utilized the following API endpoints:
+\subsubsection{Interacting with \textit{\href{https://www.eesti.ee}{eesti.ee}} internal APIs}
+For interacting with \textit{\href{https://www.eesti.ee}{eesti.ee}} internal APIs, the OkHttp library by Square, Inc\cite{okhttp-library} was used. The following API endpoints were utilized:
 
 \begin{itemize}
-    \item \textbf{GET} \texttt{https://www.eesti.ee/timur/jwt/extend-jwt-session}
+    \item \textbf{GET} \texttt{https://www.\href{https://www.eesti.ee}{eesti.ee}/timur/jwt/extend-jwt-session}
     
     An endpoint for extending JWT session.
     
-    \item \textbf{GET} \texttt{https://www.eesti.ee/andmejalgija/api/v1/usages}
+    \item \textbf{GET} \texttt{https://www.\href{https://www.eesti.ee}{eesti.ee}/andmejalgija/api/v1/usages}
     
     An endpoint for querying Data Tracker access logs.
     
@@ -112,33 +112,33 @@ Both endpoints require a valid JWT token to succeed. WebView's \texttt{CookieMan
 \subsubsection{Keeping the session alive}
 The API requests are authenticated using a JWT token cookie, the lifetime of which is 30 minutes. This means that the \textbf{Data Access Notifier} application must either run a continuous foreground service or be awakened periodically to request an updated JWT token and send requests to \textit{Andmejälgija}.
 
-On Android, there are several ways to accomplish this, although it is worth mentioning that Android is very restrictive regarding background tasks and battery usage. I tried several approaches and will describe my experience with them in the context of developing this application.
+On Android, there are several ways to accomplish this, although it is worth mentioning that Android is very restrictive regarding background tasks and battery usage. Several approaches were tried and the experience with them in the context of developing this application will be described.
 
 \subsubsection{WorkManager approach}
-According to the Android documentation, WorkManager is the recommended solution for persistent work \cite{android-persistent-work}. Work is persistent when it remains scheduled through application restarts and system reboots. This seemed to describe my use case very well, so this was the first approach that I tried.
+According to the Android documentation, WorkManager is the recommended solution for persistent work \cite{android-persistent-work}. Work is persistent when it remains scheduled through application restarts and system reboots. This seemed to describe the use case very well, so this was the first approach that was tried.
 
 Work is defined in WorkManager using a WorkRequest. There are several WorkRequest types available, including \texttt{PeriodicWorkRequest} and \texttt{OneTimeWorkRequest}.
 
 Using \texttt{PeriodicWorkRequest}, it is possible to schedule periodic tasks. The important limitation here is that it is not possible to schedule a task to execute more frequently than every 15 minutes. While this may sound appropriate for the use case of having to renew the session at least every 30 minutes, in practice, the situation is different.
 
-During development, I discovered a critical difference between session handling in web browsers versus HTTP client libraries. While the browser-based testing with Tab Reloader successfully maintained the session by refreshing the JWT token every 15 minutes, the same approach using OkHttp in the Android application failed to keep the session alive.
+During development, a critical difference between session handling in web browsers versus HTTP client libraries was discovered. While the browser-based testing with Tab Reloader successfully maintained the session by refreshing the JWT token every 15 minutes, the same approach using OkHttp in the Android application failed to keep the session alive.
 
-The exact cause of this discrepancy remains unclear. It appears that the \textit{eesti.ee} session management system expects more frequent interaction or handles cookie management differently when requests originate from HTTP client libraries compared to full web browsers. Indeed, with shorter intervals of 5 minutes, the session remains alive. This behavioral difference rendered the \texttt{PeriodicWorkRequest} approach with 15-minute intervals unsuitable for maintaining persistent sessions in the application context.
+The exact cause of this discrepancy remains unclear. It appears that the \textit{\href{https://www.eesti.ee}{eesti.ee}} session management system expects more frequent interaction or handles cookie management differently when requests originate from HTTP client libraries compared to full web browsers. Indeed, with shorter intervals of 5 minutes, the session remains alive. This behavioral difference rendered the \texttt{PeriodicWorkRequest} approach with 15-minute intervals unsuitable for maintaining persistent sessions in the application context.
 
 While \texttt{OneTimeWorkRequest} is designed for one-time tasks, it is possible to chain them by having each one-time work create another one-time work at the end of its lifespan. This approach allows setting custom intervals shorter than 15 minutes, circumventing the limitation imposed by \texttt{PeriodicWorkRequest}.
 
-While \texttt{OneTimeWorkRequest} may appear to be a suitable solution, WorkManager itself proved to be rather unreliable for my use case after testing. The limitation of WorkManager is that tasks scheduled by it are managed by the system and may be deferred if deemed necessary by the Android system. For example tasks may not execute if the phone has low battery level, or even in other scenarios depending on the aggressiveness of the Android variant regarding the restrictions imposed on application behavior.
+While \texttt{OneTimeWorkRequest} may appear to be a suitable solution, WorkManager itself proved to be rather unreliable for the use case after testing. The limitation of WorkManager is that tasks scheduled by it are managed by the system and may be deferred if deemed necessary by the Android system. For example, tasks may not execute if the phone has low battery level, or even in other scenarios depending on the aggressiveness of the Android variant regarding the restrictions imposed on application behavior.
 
 \subsubsection{Foreground service approach}
 A foreground service is one of the most reliable types of tasks an application can schedule. In contrast to background services, foreground services are considered to be of higher priority by the system and thus are not candidates for termination when the system is low on memory or the phone has low battery level.
 
 However, an important limitation has been introduced in recent Android versions. More specifically, starting from Android 15, the system places restrictions on how long certain foreground services are allowed to run while the application is in the background. Currently, this restriction only applies to \texttt{dataSync} and \texttt{mediaProcessing} foreground service types. The foreground services of those types are allowed to run for a total of 6 hours in a 24-hour period \cite{android-15-datasync-timeout}.
 
-The most appropriate foreground service type for my use case is \texttt{dataSync}, meaning that it falls under the 6-hour per day restriction. While it should be possible to choose an arbitrary foreground service type regardless of the actual task type, doing so is not the cleanest approach, especially considering the existence of better alternatives. Furthermore, doing so may also impact the application's acceptance into the Google Play Store.
+The most appropriate foreground service type for the use case is \texttt{dataSync}, meaning that it falls under the 6-hour per day restriction. While it should be possible to choose an arbitrary foreground service type regardless of the actual task type, doing so is not the cleanest approach, especially considering the existence of better alternatives. Furthermore, doing so may also impact the application's acceptance into the Google Play Store.
 
 \subsubsection{Hybrid AlarmManager approach}
 \label{alarmmanager-approach}
-After evaluating the limitations of WorkManager and the restrictions on foreground services, I ultimately settled on a hybrid approach combining AlarmManager with a \texttt{dataSync} foreground service. AlarmManager is a system service that allows scheduling operations to be executed at specific times, even if the application is not running. By using AlarmManager to trigger the application at regular intervals (e.g., every 5 minutes), it is ensured that the session renewal and data polling tasks are reliably executed.
+After evaluating the limitations of WorkManager and the restrictions on foreground services, a hybrid approach combining AlarmManager with a \texttt{dataSync} foreground service was ultimately adopted. AlarmManager is a system service that allows scheduling operations to be executed at specific times, even if the application is not running. By using AlarmManager to trigger the application at regular intervals (e.g., every 5 minutes), it is ensured that the session renewal and data polling tasks are reliably executed.
 
 When the alarm fires, the application starts a short-lived \texttt{dataSync} foreground service to perform the necessary network operations: refreshing the JWT token and querying the \textit{Andmejälgija} API. This approach leverages the reliability of foreground services for critical tasks while minimizing battery usage by only running the service when needed. AlarmManager itself is not subject to aggressive background restrictions and can wake the application even in Doze mode, making it suitable for periodic tasks.
 
@@ -146,9 +146,9 @@ This solution proved to be robust and reliable across different Android versions
 
 \subsubsection{Session limitations}
 \label{session-limitations}
-During the development and testing process, I discovered an important server-side limitation that affects the overall feasibility of the session-based approach. Despite the successful implementation of session renewal mechanisms, the \textit{GovSSO} session management system imposes a hard limit of 12 hours on session duration. After this period, the session expires permanently and cannot be renewed.
+During the development and testing process, an important server-side limitation that affects the overall feasibility of the session-based approach was discovered. Despite the successful implementation of session renewal mechanisms, the \textit{GovSSO} session management system imposes a hard limit of 12 hours on session duration. After this period, the session expires permanently and cannot be renewed.
 
-The problem was discovered when it became apparent that JWT extension fails regularly with response code \texttt{500} (Internal Server Error) from the server and no further information. Following a number of retries, the server would send code \texttt{400} (Bad Request). At some point I started looking for a pattern and discovered that the session extension starts failing after exactly 12 hours. I investigated the \textit{GovSSO} GitHub repository \cite{govsso-session} and found the answer in the configuration file.
+The problem was discovered when it became apparent that JWT extension fails regularly with response code \texttt{500} (Internal Server Error) from the server and no further information. Following a number of retries, the server would send code \texttt{400} (Bad Request). At some point a pattern was identified, and it was discovered that the session extension starts failing after exactly 12 hours. The \textit{GovSSO} GitHub repository \cite{govsso-session} was investigated and the answer was found in the configuration file.
 
 In the file \texttt{/src/main/resources/application.yml}, the following configuration parameter is defined\cite{govsso-session-config}:
 
@@ -182,7 +182,7 @@ private boolean isNbfValid(JWT idToken) throws ParseException {
 \label{lst:govsso-jwt-validation}
 \end{listing}
 
-Initially, I hypothesized that this limitation was related to the JWT token issued to the client, with the server rejecting it once it reaches the age of 12 hours. This would have been an easy fix, as there is another way to extend the session that would issue a ``fresh" JWT token each time. As can be derived from the name ``textit{GovSSO}", this authentication service supports single-sign-on, meaning that if you are signed into one state e-service, you can log into another by clicking a ``Continue session" button, as demonstrated in Figure~\ref{fig:eesti-ee-continue-session}. The same can be achieved for the same state portal where the system was initiated, if you go to the right URL. Automating this type of flow is relatively simple to implement.
+Initially, it was hypothesized that this limitation was related to the JWT token issued to the client, with the server rejecting it once it reaches the age of 12 hours. This would have been an easy fix, as there is another way to extend the session that would issue a ``fresh" JWT token each time. As can be derived from the name \textit{GovSSO}, this authentication service supports single-sign-on, meaning that if you are signed into one state e-service, you can log into another by clicking a ``Continue session" button, as demonstrated in Figure~\ref{fig:eesti-ee-continue-session}. The same can be achieved for the same state portal where the system was initiated, if you go to the right URL. Automating this type of flow is relatively simple to implement.
 
 \begin{figure}[H]
 \centering
@@ -191,7 +191,7 @@ Initially, I hypothesized that this limitation was related to the JWT token issu
 \label{fig:eesti-ee-continue-session}
 \end{figure}
 
-However, after experimenting with this method, I discovered that the 12-hour limitation applies to a different token than initially expected. The time validation is not performed on the client-side JWT token that the application receives, but rather on a server-side master JWT token that is created during the initial \textit{TARA} authentication process (ID-card, Mobile-ID, Smart-ID, etc.) and managed by \textit{GovSSO}.
+However, after experimenting with this method, it was discovered that the 12-hour limitation applies to a different token than initially expected. The time validation is not performed on the client-side JWT token that the application receives, but rather on a server-side master JWT token that is created during the initial \textit{TARA} authentication process (ID-card, Mobile-ID, Smart-ID, etc.) and managed by \textit{GovSSO}.
 
 When a user logs into additional services using the single-sign-on functionality, these secondary sessions are all linked to the same original server-side JWT token managed by \textit{GovSSO}. This architecture means that regardless of which session extension method is used, the 12-hour limit cannot be circumvented because all sessions share the same underlying authentication token that expires after 12 hours.
 
@@ -214,7 +214,7 @@ In this section the following aspects of access log handling will be tackled: th
 
 First of all, user inquiries about themselves are also considered data access and therefore produce access logs. This includes \textit{Andmejälgija} data queries. However, making frequent queries to the \textit{Andmejälgija} API produces numerous logs. 
 
-This makes it important to distinguish logs made by the user themselves from the logs made by third-parties. Thankfully, the \texttt{receiver} field contains the user's Estonian personal code in case the query is made by them. In fact, filtering by whether the receiver field contains user's personal code is exactly how the access log filtering is implemented on \textit{eesti.ee} itself when the user ticks the ``Exclude queries I have made/initiated" checkbox. Here is the \textit{eesti.ee} code extract that demonstrates this approach \cite{eesti-ee-portal}:
+This makes it important to distinguish logs made by the user themselves from the logs made by third-parties. Thankfully, the \texttt{receiver} field contains the user's Estonian personal code in case the query is made by them. In fact, filtering by whether the receiver field contains user's personal code is exactly how the access log filtering is implemented on \textit{\href{https://www.eesti.ee}{eesti.ee}} itself when the user ticks the ``Exclude queries I have made/initiated" checkbox. Here is the \textit{\href{https://www.eesti.ee}{eesti.ee}} code extract that demonstrates this approach \cite{eesti-ee-portal}:
 
 \begin{listing}[H]
 \begin{minted}{javascript}
@@ -229,11 +229,11 @@ this.accountService.getUserInfo().subscribe((o) => {
 \label{lst:eesti-ee-filtering}
 \end{listing}
 
-This is exactly how I implemented log filtering in the application. The user's personal code that is needed for filtering is extracted from the JWT token, along with the first name which is used to greet the user.
+The same approach was used to implement access log filtering in the \textbf{Data Access Notifier} application. The user's personal code that is needed for filtering is extracted from the JWT token, along with the user's first name which is used to greet the user.
 
-For deduplication of access logs, I utilized the \texttt{Set} data structure. Each access log entry is represented as a data class, and a \texttt{Set} of these entries is maintained to ensure that duplicate logs are not stored or processed multiple times. This approach leverages the fact that \texttt{Set}s in Kotlin do not allow duplicate elements.
+For deduplication of access logs, the \texttt{Set} data structure was utilized. Each access log entry is represented as a data class, and a \texttt{Set} of these entries is maintained to ensure that duplicate logs are not stored or processed multiple times. This approach leverages the fact that \texttt{Set}s in Kotlin do not allow duplicate elements.
 
-To persist the access logs across application restarts and device reboots, I used Proto Data Store, which is Android's recommended solution for storing typed objects or lists in a transactional and type-safe manner. Proto Data Store uses Protocol Buffers \cite{protocol-buffers} for serialization, offering efficient storage and schema evolution capabilities.
+To persist the access logs across application restarts and device reboots, Proto Data Store was used, which is Android's recommended solution for storing typed objects or lists in a transactional and type-safe manner. Proto Data Store uses Protocol Buffers \cite{protocol-buffers} for serialization, offering efficient storage and schema evolution capabilities.
 
 Whenever new logs are fetched from the API, they are first filtered to exclude self-access events. The newly fetched logs are then merged with the existing logs stored in Proto Data Store, and the combined set is deduplicated using Kotlin's \texttt{Set} data structure. To determine which logs are new and should trigger notifications, the application computes the set difference between the combined deduplicated logs and the previously stored logs. Only the new items resulting from this difference are used to notify the user. This approach ensures that notifications are sent only for genuinely new access events, while avoiding redundant alerts for logs that have already been seen.
 
@@ -296,9 +296,9 @@ Once authenticated, users will start receiving real-time alerts when their data 
 \subsection{Observations while using \textbf{Data Access Notifier}}
 \label{observations}
 
-While using the \textbf{Data Access Notifier} application over several weeks, I made several interesting observations about the behavior of the \textit{Andmejälgija} API and the reliability of real-time access logging.
+While using the \textbf{Data Access Notifier} application over several weeks, several interesting observations were made about the behavior of the \textit{Andmejälgija} API and the reliability of real-time access logging.
 
-One notable discovery was related to delayed log entries. I occasionally received notifications for access events dated several months in the past - specifically, events from May 2025 would sometimes appear in August 2025. Initially, I suspected this might be a deduplication issue within the application, but after examining the stored notification history, it became clear that these were genuinely new log entries that had not been seen previously by the application.
+One notable discovery was related to delayed log entries. Notifications were occasionally received for access events dated several months in the past - specifically, events from May 2025 would sometimes appear in August 2025. Initially, this was suspected to be a deduplication issue within the application, but after examining the stored notification history, it became clear that these were genuinely new log entries that had not been seen previously by the application.
 
 This behavior suggests that there may be delays in the centralized logging infrastructure of \textit{Andmejälgija}, where some access events are not immediately recorded or made available through the API.
 
@@ -313,7 +313,7 @@ While the application successfully preserves all access log data during authenti
 
 Additionally, the application's scope is currently limited to Android devices running version 8.1 and higher. While this covers approximately 96.4\% of the Android ecosystem, users of iOS or other mobile platforms cannot benefit from this solution without platform-specific implementations.
 
-The reliance on reverse-engineered internal APIs also introduces inherent fragility. Changes to \textit{eesti.ee}'s internal API structure or authentication mechanisms could potentially break the application's functionality without notice, requiring an update to the application to fix the issue.
+The reliance on reverse-engineered internal APIs also introduces inherent fragility. Changes to \textit{\href{https://www.eesti.ee}{eesti.ee}}'s internal API structure or authentication mechanisms could potentially break the application's functionality without notice, requiring an update to the application to fix the issue.
 
 Additionally, the session-based approach requires the device to maintain active network connectivity and remain operational to perform periodic authentication renewals and API polling. Extended periods of device inactivity, airplane mode, or network unavailability will result in session expiry and temporary loss of monitoring capabilities.
 
@@ -369,7 +369,7 @@ Users are encouraged to report any bugs, issues, or unexpected behavior through 
 This feedback mechanism helps improve the application's stability and reliability across different Android devices and configurations.
 
 \subsection{Contributions}
-The \textbf{Data Access Notifier} project welcomes contributions from the community. Contributions are to be submitted as pull requests to the GitHub repository. Contributors can also contact the original author directly at arkadistatsenko@gmail.com for questions, suggestions, or collaboration opportunities.
+The \textbf{Data Access Notifier} project welcomes contributions from the community. Contributions are to be submitted as pull requests to the GitHub repository. Contributors can also contact the original author directly at \href{mailto:arkadistatsenko@gmail.com}{arkadistatsenko@gmail.com} for questions, suggestions, or collaboration opportunities.
 
 
 

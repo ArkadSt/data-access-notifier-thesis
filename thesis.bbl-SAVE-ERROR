@@ -465,8 +465,8 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Screenshots taken from the Estonian state portal (eesti.ee) showing GovSSO session management interface}
-      \field{title}{eesti.ee Portal Screenshots}
+      \field{note}{Screenshots taken from the Estonian state portal (\href{https://www.eesti.ee}{eesti.ee}) showing GovSSO session management interface}
+      \field{title}{\href{https://www.eesti.ee}{eesti.ee} Portal Screenshots}
       \field{year}{2025}
     \endentry
     \entry{eesti-ee-portal}{online}{}
@@ -487,16 +487,16 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{JavaScript code excerpt}
-      \field{title}{eesti.ee - Estonian State Portal}
+      \field{title}{\href{https://www.eesti.ee}{eesti.ee} - Estonian State Portal}
       \field{urlday}{9}
       \field{urlmonth}{8}
       \field{urlyear}{2025}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://www.eesti.ee
+      \verb https://www.\href{https://www.eesti.ee}{eesti.ee}
       \endverb
       \verb{url}
-      \verb https://www.eesti.ee
+      \verb https://www.\href{https://www.eesti.ee}{eesti.ee}
       \endverb
     \endentry
     \entry{protocol-buffers}{online}{}

@@ -21,7 +21,7 @@
 \contentsline {subsection}{\numberline {4.3}Development}{16}{subsection.4.3}%
 \contentsline {subsubsection}{\numberline {4.3.1}Licensing}{18}{subsubsection.4.3.1}%
 \contentsline {subsubsection}{\numberline {4.3.2}Authentication}{18}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Interacting with \textit {eesti.ee} internal APIs}{19}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3}Interacting with \textit {\href {https://www.eesti.ee}{eesti.ee}} internal APIs}{19}{subsubsection.4.3.3}%
 \contentsline {subsubsection}{\numberline {4.3.4}Keeping the session alive}{20}{subsubsection.4.3.4}%
 \contentsline {subsubsection}{\numberline {4.3.5}WorkManager approach}{21}{subsubsection.4.3.5}%
 \contentsline {subsubsection}{\numberline {4.3.6}Foreground service approach}{22}{subsubsection.4.3.6}%
