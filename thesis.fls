@@ -347,15 +347,23 @@ INPUT ./thesis.pyg
 INPUT ./_minted-thesis/D03DB6243DF53C8401FB4FB2213AE8FC98AC6650688363CDFA3DF2E4C7E54189.pygtex
 INPUT ./english/figures/Screenshot from 2025-08-08 20-37-42.png
 INPUT ./english/figures/Screenshot from 2025-08-08 20-37-42.png
+INPUT ./english/figures/Screenshot_20250812_212624_Data Access Notifier.jpg
+INPUT ./english/figures/Screenshot_20250812_212624_Data Access Notifier.jpg
 OUTPUT thesis.pyg
 INPUT ./thesis.pyg
 INPUT ./_minted-thesis/F835728CC642A615908554D0E95462E49B4508BF907A63D4CE444D5FB383F2CC.pygtex
-INPUT ./english/figures/Screenshot_20250810_154333_Data Access Notifier.jpg
-INPUT ./english/figures/Screenshot_20250810_154333_Data Access Notifier.jpg
-INPUT ./english/figures/Screenshot_20250810_154342_Data Access Notifier.jpg
-INPUT ./english/figures/Screenshot_20250810_154342_Data Access Notifier.jpg
-INPUT ./english/figures/Screenshot_20250810_154411_Data Access Notifier.jpg
-INPUT ./english/figures/Screenshot_20250810_154411_Data Access Notifier.jpg
+INPUT ./english/figures/Screenshot_20250812_212139_Settings.jpg
+INPUT ./english/figures/Screenshot_20250812_212139_Settings.jpg
+INPUT ./english/figures/Screenshot_20250812_212153_Permission controller.jpg
+INPUT ./english/figures/Screenshot_20250812_212153_Permission controller.jpg
+INPUT ./english/figures/Screenshot_20250812_212555_Data Access Notifier.jpg
+INPUT ./english/figures/Screenshot_20250812_212555_Data Access Notifier.jpg
+INPUT ./english/figures/Screenshot_20250812_212238_Data Access Notifier.jpg
+INPUT ./english/figures/Screenshot_20250812_212238_Data Access Notifier.jpg
+INPUT ./english/figures/Screenshot_20250812_212306_Data Access Notifier.jpg
+INPUT ./english/figures/Screenshot_20250812_212306_Data Access Notifier.jpg
+INPUT ./english/figures/Screenshot_20250812_212336_Data Access Notifier.jpg
+INPUT ./english/figures/Screenshot_20250812_212336_Data Access Notifier.jpg
 INPUT ./english/figures/Screenshot_20250801_133754_Signal.jpg
 INPUT ./english/figures/Screenshot_20250801_133754_Signal.jpg
 INPUT ./english/figures/IMG_20250809_225839_242.jpg

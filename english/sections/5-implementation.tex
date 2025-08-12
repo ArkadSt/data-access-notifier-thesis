@@ -8,12 +8,12 @@ The main objective of this thesis has been to develop a solution that would noti
 There are several possible approaches for developing such a solution. In this section I will discuss different implementation options as well as their advantages and disadvantages.
 
 \subsubsection{X-Road service}
-\textit{Andmejälgija} specifications require entities responsible for the state databases to implement an X-Road interface themselves, as described in \ref{protocol_desc}, so one option would be to create an X-Road service that would query \textit{Andmejälgija} data over X-Road directly from those entities. The main advantage of this approach would be the freedom in how to notify users of changes to the access logs. Being a server, the service could support various communication channels, including notifying a user via instant messenger bot or e-mail, for example. However, the list of requirements to operate such a service is daunting. 
+\textit{Andmejälgija} specifications require entities responsible for the state databases to implement an X-Road interface themselves, as described in \ref{protocol_desc}, so one option would be to create an X-Road service that would query \textit{Andmejälgija} data over X-Road directly from those entities. The main advantage of this approach would be the freedom in how to notify users of changes to the access logs. As a server-based solution, the service could support various communication channels for delivering notifications to users, including instant messenger bots or e-mail notifications, for example. However, the list of requirements to operate such a service is daunting. 
 
 \begin{itemize}
     \item {In order to join X-Road, a legal entity is needed.}
     \item {Permission has to be requested from every X-Road service you want to query data from. Specifically, considering that each information system is responsible for implementing the \textit{Andmejälgija} protocol themselves, the permission would be required from each entity responsible for the information systems from which the access logs would be requested.}
-    \item {As part of X-Road network, one needs to operate a Security Server. It can be self-hosted anywhere for testing, but for production a Hardware Security Module (HSM) is needed, in order to be compliant with eIDAS requirements. For example, a Thales Luna PCIe HSM A700 suitable for eIDAS qualified digital signing costs €8,990 (€10,877.90 incl. VAT) \cite{thales-luna-hsm-pricing}. Alternatively, renting a production ready Security server from Telia costs 210€ per month \cite{telia-xroad-server}}
+    \item {As part of X-Road network, one needs to operate a Security Server. For testing, it can be self-hosted on any hardware, but for production, a Hardware Security Module (HSM) is needed, in order to be compliant with eIDAS requirements. Obtaining or renting such hardware involves substantial financial investment. For example, a Thales Luna PCIe HSM A700 suitable for eIDAS qualified digital signing costs €8,990 (€10,877.90 incl. VAT) \cite{thales-luna-hsm-pricing}. Alternatively, renting a production ready Security server from Telia costs 210€ per month \cite{telia-xroad-server}}
     \item {Finally, considering that this approach would include creating a service that would store and transmit user's data, it would be required to follow strict regulatory requirements including the General Data Protection Regulation (GDPR). Staying compliant requires a continuous effort, and in case of failure to do so, there are harsh fines.}
 \end{itemize}
 
@@ -24,7 +24,7 @@ This approach uses the \textit{eesti.ee} session for accessing \textit{Andmejäl
 
 The main advantage of this approach is the absence of all disadvantages of the X-Road approach: there are no legal requirements and the solution could be an open-source project, available for anybody to compile and use. There arises a problem, however. What about the notification part? Do I expect users to set everything up on their hardware, including relevant communication channels? That would narrow down the project's user base to technical people knowing how to self-host, and having a server.
 
-That's why I thought that creating a mobile application would be the most optimal approach. A mobile application would keep the \textit{eesti.ee} session alive and poll the \textit{Andmejälgija} API. This approach combines ease of setup and use while keeping the solution standalone, without requiring a central server.
+Consequently, creating a mobile application was determined to be the most optimal approach. A mobile application would keep the \textit{eesti.ee} session alive and poll the \textit{Andmejälgija} API. This approach combines ease of setup and use while keeping the solution standalone, without requiring a central server.
 
 \subsection{Development}
 
@@ -36,7 +36,7 @@ Once the user is authenticated, certain internal API endpoints become available,
 
 To test whether the session could be kept alive indefinitely, I used the Tab Reloader extension for Firefox by James Fray \cite{tab-reloader-addon}. Using this browser extension, I configured the browser to automatically reload the tab with the JWT token refresh endpoint. After an 8-hour experiment, I deemed the approach successful.
 
-The next step was the development of the \textbf{Data Access Notifier} Android application. The reason why I decided to focus on Android instead of IOS is because Android Development is way more accessible for an average person who doesn't own an Apple computer. Unlike IOS, Android Development can be performed on nearly any modern computer with reasonably common operating system installed, including Linux, which I am a user of.
+The next step was the development of the \textbf{Data Access Notifier} Android application. The reason why Android was chosen over iOS is that Android development is significantly more accessible for developers who do not own an Apple computer. Unlike iOS, Android development can be performed on nearly any modern computer with reasonably common operating system installed, including Linux, which I am a user of.
 
 I have chosen to develop the application using the Kotlin programming language due to it being the new standard for developing Android applications \cite{kotlin-first}, as well as its more expressive syntax and promise of faster development speed.
 
@@ -150,13 +150,13 @@ During the development and testing process, I discovered an important server-sid
 
 The problem was discovered when it became apparent that JWT extension fails regularly with response code \texttt{500} (Internal Server Error) from the server and no further information. Following a number of retries, the server would send code \texttt{400} (Bad Request). At some point I started looking for a pattern and discovered that the session extension starts failing after exactly 12 hours. I investigated the \textit{GovSSO} GitHub repository \cite{govsso-session} and found the answer in the configuration file.
 
-In the file \texttt{/src/main/resources/application.yml}, the following configuration parameter is defined:
+In the file \texttt{/src/main/resources/application.yml}, the following configuration parameter is defined\cite{govsso-session-config}:
 
 \begin{listing}[H]
 \begin{minted}{yaml}
 session-max-duration-hours: 12
 \end{minted}
-\caption{GovSSO session configuration parameter}
+\caption{GovSSO session configuration parameter\cite{govsso-session-config}}
 \label{lst:govsso-config}
 \end{listing}
 
@@ -182,7 +182,7 @@ private boolean isNbfValid(JWT idToken) throws ParseException {
 \label{lst:govsso-jwt-validation}
 \end{listing}
 
-Initially, I hypothesized that this limitation was related to the JWT token issued to the client, with the server rejecting it once it reaches the age of 12 hours. This would have been an easy fix, as there is another way to extend the session that would issue a ``fresh" JWT token each time. As can be derived from the name ``textit{GovSSO}", this authentication service supports single-sign-on, meaning that if you are signed into one state e-service, you can log into another by clicking a ``Continue session" button, as demonstrated in Figure~\ref{fig:eesti-ee-continue-session}. The same can be achieved for the same state portal where the system was initiated, if you go to the right URL. Automating this kind of flow is straightforward.
+Initially, I hypothesized that this limitation was related to the JWT token issued to the client, with the server rejecting it once it reaches the age of 12 hours. This would have been an easy fix, as there is another way to extend the session that would issue a ``fresh" JWT token each time. As can be derived from the name ``textit{GovSSO}", this authentication service supports single-sign-on, meaning that if you are signed into one state e-service, you can log into another by clicking a ``Continue session" button, as demonstrated in Figure~\ref{fig:eesti-ee-continue-session}. The same can be achieved for the same state portal where the system was initiated, if you go to the right URL. Automating this type of flow is relatively simple to implement.
 
 \begin{figure}[H]
 \centering
@@ -199,11 +199,20 @@ This limitation has significant implications for the notification system's relia
 
 Specifically, the API returns comprehensive historical access logs, ensuring that once a user re-authenticates after a session expiry, they will receive all notifications for events that occurred during the period when they were logged out. This behavior is crucial for maintaining data completeness and ensuring that no critical access events are missed due to authentication gaps. The technical implementation of this log handling is detailed in \ref{log-handling}.
 
+Additionally, in order to enhance user awareness of session expiry, the application implements a proactive notification mechanism, as shown in Figure~\ref{fig:session-expiry-notification}, informing the user that they have been logged out and prompting them to re-authenticate to continue monitoring.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=250px]{english/figures/Screenshot_20250812_212624_Data Access Notifier.jpg}
+\caption{Notification informing the user about session expiry.}
+\label{fig:session-expiry-notification}
+\end{figure}
+
 \subsubsection{Handling logs and notification delivery}
 \label{log-handling}
 In this section the following aspects of access log handling will be tackled: their storage, deduplication and filtering.
 
-First of all, user inquiries about themselves are also considered data access and therefore produce access logs. This includes \textit{Andmejälgija} data queries. However, making frequent queries to the \textit{Andmejälgija} API produces a lot of logs. 
+First of all, user inquiries about themselves are also considered data access and therefore produce access logs. This includes \textit{Andmejälgija} data queries. However, making frequent queries to the \textit{Andmejälgija} API produces numerous logs. 
 
 This makes it important to distinguish logs made by the user themselves from the logs made by third-parties. Thankfully, the \texttt{receiver} field contains the user's Estonian personal code in case the query is made by them. In fact, filtering by whether the receiver field contains user's personal code is exactly how the access log filtering is implemented on \textit{eesti.ee} itself when the user ticks the ``Exclude queries I have made/initiated" checkbox. Here is the \textit{eesti.ee} code extract that demonstrates this approach \cite{eesti-ee-portal}:
 
@@ -239,29 +248,43 @@ After installation and opening for the first time, the \textbf{Data Access Notif
 
 Once the necessary permissions are given, the Log In screen appears. When Log In button is pressed, an Android WebView is opened, redirecting the user to \textit{TARA} Log In screen. There user is free to choose whatever state authentication option they choose.
 
-And that's it! As soon as authentication is successfully completed, the user will start receiving notifications as soon as there are any new data access logs returned from the server. There is also a view inside of the application showing all data access logs saved. The authentication process is illustrated in Figure~\ref{fig:app-usage}.
+The setup process is now complete. As soon as authentication is successfully completed, the user will start receiving notifications as soon as there are any new data access logs returned from the server. There is also a view inside of the application showing all data access logs saved. The set-up process is illustrated in Figure~\ref{fig:app-usage}, with the relevant settings page for permitting the application to schedule alarms being opened automatically.
 
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.32\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{english/figures/Screenshot_20250810_154333_Data Access Notifier.jpg}
+    \includegraphics[width=\textwidth]{english/figures/Screenshot_20250812_212139_Settings.jpg}
 \end{minipage}%
 \hfill
 \begin{minipage}{0.32\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{english/figures/Screenshot_20250810_154342_Data Access Notifier.jpg}
+    \includegraphics[width=\textwidth]{english/figures/Screenshot_20250812_212153_Permission controller.jpg}
 \end{minipage}%
 \hfill
 \begin{minipage}{0.32\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{english/figures/Screenshot_20250810_154411_Data Access Notifier.jpg}
+    \includegraphics[width=\textwidth]{english/figures/Screenshot_20250812_212555_Data Access Notifier.jpg}
+\end{minipage}
+\begin{minipage}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{english/figures/Screenshot_20250812_212238_Data Access Notifier.jpg}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{english/figures/Screenshot_20250812_212306_Data Access Notifier.jpg}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{english/figures/Screenshot_20250812_212336_Data Access Notifier.jpg}
 \end{minipage}
 \caption{Authentication to Data Access Notifier}
 \label{fig:app-usage}
 \end{figure} 
 
-Once authenticated, users will receive real-time alerts when their data is accessed, as shown in Figure~\ref{fig:data-access-notification}.
+Once authenticated, users will start receiving real-time alerts when their data is accessed, as shown in Figure~\ref{fig:data-access-notification}.
 
 \begin{figure}[H]
 \centering
@@ -279,7 +302,7 @@ One notable discovery was related to delayed log entries. I occasionally receive
 
 This behavior suggests that there may be delays in the centralized logging infrastructure of \textit{Andmejälgija}, where some access events are not immediately recorded or made available through the API.
 
-The application proved to be quite reliable in maintaining the authentication session during the 12-hour window. The hybrid AlarmManager approach (described in \ref{alarmmanager-approach}) successfully maintained connectivity even during extended periods of device inactivity or network fluctuations.
+The application demonstrated substantial reliability in maintaining the authentication session during the 12-hour window. The hybrid AlarmManager approach (described in \ref{alarmmanager-approach}) successfully maintained connectivity even during extended periods of device inactivity or network fluctuations.
 
 From a user experience perspective, the notifications provided valuable insights into data access patterns that would otherwise remain unnoticed. This transparency feature proved particularly useful for understanding which organizations access personal data and how frequently such access occurs.
 
@@ -296,7 +319,7 @@ Additionally, the session-based approach requires the device to maintain active 
 
 The application also doesn't currently support the access logging implemented in \textit{E-File}.
 
-Finally, the \textit{Andmejälgija} protocol itself is not regulated by the law, and information systems are not required to implement it, and even if they do, not all data access events are guaranteed to be timely distributed or logged at all.
+Finally, the \textit{Andmejälgija} protocol itself is not regulated by the law yet, so information systems are not required to implement it, and even if they do, not all data access events are guaranteed to be timely distributed or logged at all.
 
 \subsubsection{Tested devices}
 The \textbf{Data Access Notifier} application has been tested on the following devices:

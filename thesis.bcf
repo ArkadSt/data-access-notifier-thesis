@@ -2382,27 +2382,28 @@
     <bcf:citekey order="16" intorder="1">coalition-agreement-2025-2027</bcf:citekey>
     <bcf:citekey order="17" intorder="1">e-toimik-screenshot</bcf:citekey>
     <bcf:citekey order="18" intorder="1">e-toimik-screenshot</bcf:citekey>
-    <bcf:citekey order="19" intorder="1">e-toimik-screenshot</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">e-toimik-screenshot</bcf:citekey>
-    <bcf:citekey order="21" intorder="1">thales-luna-hsm-pricing</bcf:citekey>
-    <bcf:citekey order="22" intorder="1">telia-xroad-server</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">tab-reloader-addon</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">kotlin-first</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">okhttp-library</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">android-persistent-work</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">android-15-datasync-timeout</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">govsso-session</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">govsso-session-hydra</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">eesti-ee-screenshot</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">thales-luna-hsm-pricing</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">telia-xroad-server</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">tab-reloader-addon</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">kotlin-first</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">okhttp-library</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">android-persistent-work</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">android-15-datasync-timeout</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">govsso-session</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">govsso-session-config</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">govsso-session-config</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">govsso-session-config</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">govsso-session-hydra</bcf:citekey>
     <bcf:citekey order="31" intorder="1">eesti-ee-screenshot</bcf:citekey>
-    <bcf:citekey order="32" intorder="1">eesti-ee-portal</bcf:citekey>
-    <bcf:citekey order="33" intorder="1">protocol-buffers</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">data-access-notifier</bcf:citekey>
-    <bcf:citekey order="35" intorder="1">data-access-notifier-releases</bcf:citekey>
-    <bcf:citekey order="36" intorder="1">obtainium</bcf:citekey>
-    <bcf:citekey order="37" intorder="1">data-access-notifier</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">e-file-rik</bcf:citekey>
-    <bcf:citekey order="39" intorder="1">android-workmanager</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">eesti-ee-screenshot</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">eesti-ee-portal</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">protocol-buffers</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">data-access-notifier</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">data-access-notifier-releases</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">obtainium</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">data-access-notifier</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">e-file-rik</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">android-workmanager</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

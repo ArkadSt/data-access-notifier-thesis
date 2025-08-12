@@ -196,8 +196,8 @@
       \strng{authorbibnamehash}{3c4fa9b356e4040bc10888c083a89779}
       \strng{authornamehash}{3c4fa9b356e4040bc10888c083a89779}
       \strng{authorfullhash}{3c4fa9b356e4040bc10888c083a89779}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Price: €8,990 (€10,877.90 incl. VAT). eIDAS qualified QSCD capable.}
@@ -419,7 +419,7 @@
       \verb https://github.com/e-gov/GovSSO-Session
       \endverb
     \endentry
-    \entry{govsso-session-hydra}{software}{}
+    \entry{govsso-session-config}{online}{}
       \name{author}{1}{}{%
         {{hash=ecef54b45dfaddc6c79a15ef832e2ac7}{%
            family={{Information System Authority (RIA)}},
@@ -434,6 +434,35 @@
       \field{extraname}{5}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{GovSSO Session Configuration File}
+      \field{urlday}{12}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/e-gov/GovSSO-Session/blob/a95c781a8f7b05bde550acb34b8292b6c884b802/src/main/resources/application.yml#L69
+      \endverb
+      \verb{url}
+      \verb https://github.com/e-gov/GovSSO-Session/blob/a95c781a8f7b05bde550acb34b8292b6c884b802/src/main/resources/application.yml#L69
+      \endverb
+    \endentry
+    \entry{govsso-session-hydra}{software}{}
+      \name{author}{1}{}{%
+        {{hash=ecef54b45dfaddc6c79a15ef832e2ac7}{%
+           family={{Information System Authority (RIA)}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{ecef54b45dfaddc6c79a15ef832e2ac7}
+      \strng{fullhash}{ecef54b45dfaddc6c79a15ef832e2ac7}
+      \strng{bibnamehash}{ecef54b45dfaddc6c79a15ef832e2ac7}
+      \strng{authorbibnamehash}{ecef54b45dfaddc6c79a15ef832e2ac7}
+      \strng{authornamehash}{ecef54b45dfaddc6c79a15ef832e2ac7}
+      \strng{authorfullhash}{ecef54b45dfaddc6c79a15ef832e2ac7}
+      \field{extraname}{6}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{GovSSO Session - HydraService.java}
@@ -483,7 +512,7 @@
       \strng{authorbibnamehash}{ecef54b45dfaddc6c79a15ef832e2ac7}
       \strng{authornamehash}{ecef54b45dfaddc6c79a15ef832e2ac7}
       \strng{authorfullhash}{ecef54b45dfaddc6c79a15ef832e2ac7}
-      \field{extraname}{6}
+      \field{extraname}{7}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
@@ -662,8 +691,8 @@
       \strng{authornamehash}{7ace771b22ac28958ff5694e260839cc}
       \strng{authorfullhash}{7ace771b22ac28958ff5694e260839cc}
       \field{extraname}{4}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{WorkManager}
