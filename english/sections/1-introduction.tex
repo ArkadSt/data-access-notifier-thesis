@@ -4,7 +4,7 @@ In Estonia there are a lot of state databases holding users' data, like Populati
 
 For the purposes of making the process more transparent, the Estonian Information System Authority (RIA) created a special service, Data Tracker (\textit{Andmejälgija}), in 2017, through which users can check which parties have accessed their data \cite{err-population-registry-unauthorized-access}. 
 
-The Data Tracker is a people-oriented service on the state portal \textit{eesti.ee}, which aims to ensure transparency in the processing of personal data in both private and public sectors. The data tracker relies on the ability of each state database to store the data processing taking place within itself in the form of logs, in order to later display it to the individual, i.e. the data subject, via the service on \textit{eesti.ee} \cite{aj-github}.
+The Data Tracker is a people-oriented service on the state portal \textit{eesti.ee}, which aims to ensure transparency in the processing of personal data in both private and public sectors. The Data Tracker relies on the ability of each state database to store the data processing taking place within itself in the form of logs, in order to later display it to the individual, i.e. the data subject, via the service on \textit{eesti.ee} \cite{aj-github}.
 
 Architecturally, it is a fully distributed system, i.e. the information displayed to the user comes directly from the database that implemented the Data Tracker service. At the user's request, \textit{eesti.ee} makes a query to each of the Data Tracker services and displays the query response without saving it \cite{aj-github}.
 

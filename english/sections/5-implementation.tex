@@ -40,7 +40,7 @@ The next step was the development of the \textbf{Data Access Notifier} Android a
 
 I have chosen to develop the application using the Kotlin programming language due to it being the new standard for developing Android applications \cite{kotlin-first}, as well as its more expressive syntax and promise of faster development speed.
 
-The application is compatible with all Android versions starting from Android 8.1, meaning that it works on approximately 96.4\% of Android devices according to the Android Studio API version distribution chart \cite{android-api-distribution,android-studio-screenshot}.
+The application is compatible with all Android versions starting from Android 8.1, meaning that it works on approximately 96.4\% of Android devices according to the Android Studio API version distribution chart shown in Figure~\ref{fig:android-api-distribution}.
 
 \begin{figure}[H]
 \centering
@@ -182,7 +182,7 @@ private boolean isNbfValid(JWT idToken) throws ParseException {
 \label{lst:govsso-jwt-validation}
 \end{listing}
 
-Initially, I hypothesized that this limitation was related to the JWT token issued to the client, with the server rejecting it once it reaches the age of 12 hours. This would have been an easy fix, as there is another way to extend the session that would issue a "fresh" JWT token each time. As can be derived from the name "\textit{GovSSO}", this authentication service supports single-sign-on, meaning that if you are signed into one state e-service, you can log into another by clicking a "Continue session" button. The same can be achieved for the same state portal where the system was initiated, if you go to the right URL. Automating this kind of flow is straightforward.
+Initially, I hypothesized that this limitation was related to the JWT token issued to the client, with the server rejecting it once it reaches the age of 12 hours. This would have been an easy fix, as there is another way to extend the session that would issue a "fresh" JWT token each time. As can be derived from the name "\textit{GovSSO}", this authentication service supports single-sign-on, meaning that if you are signed into one state e-service, you can log into another by clicking a "Continue session" button, as demonstrated in Figure~\ref{fig:eesti-ee-continue-session}. The same can be achieved for the same state portal where the system was initiated, if you go to the right URL. Automating this kind of flow is straightforward.
 
 \begin{figure}[H]
 \centering
@@ -239,7 +239,7 @@ After installation and opening for the first time, the \textbf{Data Access Notif
 
 Once the necessary permissions are given, the Log In screen appears. When Log In button is pressed, an Android WebView is opened, redirecting the user to \textit{TARA} Log In screen. There user is free to choose whatever state authentication option they choose.
 
-And that's it! As soon as authentication is successfully completed, the user will start receiving notifications as soon as there are any new data access logs returned from the server. There is also a view inside of the application showing all data access logs saved.
+And that's it! As soon as authentication is successfully completed, the user will start receiving notifications as soon as there are any new data access logs returned from the server. There is also a view inside of the application showing all data access logs saved. The authentication process is illustrated in Figure~\ref{fig:app-usage}.
 
 \begin{figure}[H]
 \centering
@@ -260,6 +260,8 @@ And that's it! As soon as authentication is successfully completed, the user wil
 \caption{Authentication to Data Access Notifier}
 \label{fig:app-usage}
 \end{figure} 
+
+Once authenticated, users will receive real-time alerts when their data is accessed, as shown in Figure~\ref{fig:data-access-notification}.
 
 \begin{figure}[H]
 \centering
@@ -307,7 +309,7 @@ The \textbf{Data Access Notifier} application has been tested on the following d
 \subsection{Battery usage}
 \textbf{Data Access Notifier} application maintains relatively low power consumption despite its continuous background operation. The hybrid AlarmManager approach with short-lived foreground services appears to be efficient in terms of battery impact.
 
-While the battery utilization hasn't been actively monitored, some screenshots have been taken on Samsung Galaxy S25 at different times during the active use period.
+While the battery utilization hasn't been actively monitored, some screenshots have been taken on Samsung Galaxy S25 at different times during the active use period, as shown in Figure~\ref{fig:battery-usage}.
 
 \begin{figure}[H]
 \centering

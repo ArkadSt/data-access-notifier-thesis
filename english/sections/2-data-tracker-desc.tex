@@ -20,10 +20,12 @@ The time period for which usage information can be requested\cite{aj-github-spec
 
 Requesting the availability status of the tracker's usage information\cite{aj-github-spec}.
 
+The overall architecture of the \textit{Andmejälgija} system is illustrated in Figure~\ref{fig:aj-model}, which shows how state databases interact with the \textit{eesti.ee} portal through X-Road to provide data access logs to end users.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=450px]{english/figures/aj_model.PNG}
-\caption{\textit{Andmejälgija} (Data Tracker) system architecture showing the interaction between entities implementing data tracking and \textit{eesti.ee} data tracker view. The data exchange happens via X-Road.}
+\caption{\textit{Andmejälgija} (Data Tracker) system architecture showing the interaction between entities implementing data tracking and \textit{eesti.ee} Data Tracker view. The data exchange happens via X-Road\cite{aj-github}.}
 \label{fig:aj-model}
 \end{figure}
 
@@ -71,7 +73,7 @@ There is even an information sheet with recommendations for services implementin
 \caption{Example of poor data access descriptions}
 \end{table}
 
-Apparently, the advice is often ignored, as many institutions tend to follow the bad example in practice. The thesis author's data tracker view is flooded with entries containing meaningless descriptions like the following:
+Apparently, the advice is often ignored, as many institutions tend to follow the bad example in practice. The thesis author's Data Tracker view is flooded with entries containing meaningless descriptions like the following:
 
 \begin{table}[H]
 \centering
@@ -86,7 +88,7 @@ Apparently, the advice is often ignored, as many institutions tend to follow the
 01.08.2025 20:23 & Education and Youth Board & Population Registry & PERSONAL DATA BY PERSONAL CODE \\
 \hline
 \end{tabular}
-\caption{Extract from author's data tracker view demonstrating poor quality descriptions}
+\caption{Extract from author's Data Tracker view demonstrating poor quality descriptions}
 \end{table}
 
 Furthermore, currently there is no law requiring institutions to implement the \textit{Andmejälgija} protocol, meaning that its use is pretty much voluntary.
