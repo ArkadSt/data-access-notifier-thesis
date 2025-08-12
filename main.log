@@ -1237,7 +1237,7 @@ and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
 l.32 \subsubsection
-                   {E-File System (E-toimik)}
+                   {E-File System (E-Toimik)}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1274,7 +1274,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.38 \caption
-             {E-File System (E-toimik) web interface for data access trackin...
+             {E-File System (E-Toimik) web interface for data access trackin...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.

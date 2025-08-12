@@ -2,7 +2,7 @@
 \babel@toc {estonian}{}\relax 
 \babel@toc {british}{}\relax 
 \contentsline {section}{\numberline {1}Introduction}{5}{section*.2}%
-\contentsline {section}{\numberline {2}Andmejälgija}{6}{section*.3}%
+\contentsline {section}{\numberline {2}\textit {Andmejälgija}}{6}{section*.3}%
 \contentsline {subsection}{\numberline {2.1}The protocol}{6}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Usage}{7}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Adoption}{7}{subsection.2.3}%
@@ -11,7 +11,7 @@
 \contentsline {subsubsection}{\numberline {3.1.1}Examples of good implementation}{10}{subsubsection.3.1.1}%
 \contentsline {subsubsection}{\numberline {3.1.2}Other databases implementing \textit {Andmejälgija}}{10}{subsubsection.3.1.2}%
 \contentsline {subsection}{\numberline {3.2}Databases providing other form of data access tracking}{11}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}E-File System (E-toimik)}{11}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.1}E-File System (E-Toimik)}{11}{subsubsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.3}Databases not providing any kind of data access tracking}{13}{subsection.3.3}%
 \contentsline {section}{\numberline {4}Implementation}{15}{section*.12}%
 \contentsline {subsection}{\numberline {4.1}Description}{15}{subsection.4.1}%
