@@ -182,7 +182,7 @@ private boolean isNbfValid(JWT idToken) throws ParseException {
 \label{lst:govsso-jwt-validation}
 \end{listing}
 
-Initially, I hypothesized that this limitation was related to the JWT token issued to the client, with the server rejecting it once it reaches the age of 12 hours. This would have been an easy fix, as there is another way to extend the session that would issue a "fresh" JWT token each time. As can be derived from the name "\textit{GovSSO}", this authentication service supports single-sign-on, meaning that if you are signed into one state e-service, you can log into another by clicking a "Continue session" button, as demonstrated in Figure~\ref{fig:eesti-ee-continue-session}. The same can be achieved for the same state portal where the system was initiated, if you go to the right URL. Automating this kind of flow is straightforward.
+Initially, I hypothesized that this limitation was related to the JWT token issued to the client, with the server rejecting it once it reaches the age of 12 hours. This would have been an easy fix, as there is another way to extend the session that would issue a ``fresh" JWT token each time. As can be derived from the name ``textit{GovSSO}", this authentication service supports single-sign-on, meaning that if you are signed into one state e-service, you can log into another by clicking a ``Continue session" button, as demonstrated in Figure~\ref{fig:eesti-ee-continue-session}. The same can be achieved for the same state portal where the system was initiated, if you go to the right URL. Automating this kind of flow is straightforward.
 
 \begin{figure}[H]
 \centering
@@ -205,7 +205,7 @@ In this section the following aspects of access log handling will be tackled: th
 
 First of all, user inquiries about themselves are also considered data access and therefore produce access logs. This includes \textit{Andmejälgija} data queries. However, making frequent queries to the \textit{Andmejälgija} API produces a lot of logs. 
 
-This makes it important to distinguish logs made by the user themselves from the logs made by third-parties. Thankfully, the \texttt{receiver} field contains the user's Estonian personal code in case the query is made by them. In fact, filtering by whether the receiver field contains user's personal code is exactly how the access log filtering is implemented on \textit{eesti.ee} itself when the user ticks the "Exclude queries I have made/initiated" checkbox. Here is the \textit{eesti.ee} code extract that demonstrates this approach \cite{eesti-ee-portal}:
+This makes it important to distinguish logs made by the user themselves from the logs made by third-parties. Thankfully, the \texttt{receiver} field contains the user's Estonian personal code in case the query is made by them. In fact, filtering by whether the receiver field contains user's personal code is exactly how the access log filtering is implemented on \textit{eesti.ee} itself when the user ticks the ``Exclude queries I have made/initiated" checkbox. Here is the \textit{eesti.ee} code extract that demonstrates this approach \cite{eesti-ee-portal}:
 
 \begin{listing}[H]
 \begin{minted}{javascript}

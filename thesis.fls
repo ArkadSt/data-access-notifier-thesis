@@ -311,6 +311,15 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT ./english/sections/3-state-databases-overview.tex
+INPUT ./english/figures/e-toimik.png
+INPUT ./english/figures/e-toimik.png
+INPUT ./english/figures/Screenshot from 2025-08-09 11-59-33.png
+INPUT ./english/figures/Screenshot from 2025-08-09 11-59-33.png
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi5.tfm
@@ -323,15 +332,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr5.tfm
-INPUT ./english/sections/3-state-databases-overview.tex
-INPUT ./english/figures/e-toimik.png
-INPUT ./english/figures/e-toimik.png
-INPUT ./english/figures/Screenshot from 2025-08-09 11-59-33.png
-INPUT ./english/figures/Screenshot from 2025-08-09 11-59-33.png
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT ./english/sections/5-implementation.tex
 INPUT ./english/figures/Screenshot from 2025-08-11 22-58-16.png
 INPUT ./english/figures/Screenshot from 2025-08-11 22-58-16.png

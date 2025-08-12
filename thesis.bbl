@@ -107,6 +107,60 @@
       \verb https://github.com/e-gov/AJ/blob/master/doc/spetsifikatsioonid/Kasutusteabe_esitamise_protokoll.md
       \endverb
     \endentry
+    \entry{ria-andmejalgija-recommendations}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ecef54b45dfaddc6c79a15ef832e2ac7}{%
+           family={{Information System Authority (RIA)}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{ecef54b45dfaddc6c79a15ef832e2ac7}
+      \strng{fullhash}{ecef54b45dfaddc6c79a15ef832e2ac7}
+      \strng{bibnamehash}{ecef54b45dfaddc6c79a15ef832e2ac7}
+      \strng{authorbibnamehash}{ecef54b45dfaddc6c79a15ef832e2ac7}
+      \strng{authornamehash}{ecef54b45dfaddc6c79a15ef832e2ac7}
+      \strng{authorfullhash}{ecef54b45dfaddc6c79a15ef832e2ac7}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Soovitusi Andmejälgija rakendamiseks}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.ria.ee/sites/default/files/documents/2022-11/Soovitusi-Andmejalgija-rakendamiseks.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.ria.ee/sites/default/files/documents/2022-11/Soovitusi-Andmejalgija-rakendamiseks.pdf
+      \endverb
+    \endentry
+    \entry{coalition-agreement-2025-2027}{online}{}
+      \name{author}{1}{}{%
+        {{hash=694d177a66ee4dc6f3c776d54d3afc4f}{%
+           family={{Estonian Government}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{694d177a66ee4dc6f3c776d54d3afc4f}
+      \strng{fullhash}{694d177a66ee4dc6f3c776d54d3afc4f}
+      \strng{bibnamehash}{694d177a66ee4dc6f3c776d54d3afc4f}
+      \strng{authorbibnamehash}{694d177a66ee4dc6f3c776d54d3afc4f}
+      \strng{authornamehash}{694d177a66ee4dc6f3c776d54d3afc4f}
+      \strng{authorfullhash}{694d177a66ee4dc6f3c776d54d3afc4f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Coalition Agreement 2025-2027: Digital State}
+      \field{urlday}{12}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://valitsus.ee/valitsuse-eesmargid-ja-tegevused/valitsemise-alused/koalitsioonilepe-2025-2027/digiriik
+      \endverb
+      \verb{url}
+      \verb https://valitsus.ee/valitsuse-eesmargid-ja-tegevused/valitsemise-alused/koalitsioonilepe-2025-2027/digiriik
+      \endverb
+    \endentry
     \entry{e-toimik-screenshot}{misc}{}
       \name{author}{1}{}{%
         {{hash=77f583af40b09e2e99038de511fe87ae}{%
@@ -142,8 +196,8 @@
       \strng{authorbibnamehash}{3c4fa9b356e4040bc10888c083a89779}
       \strng{authornamehash}{3c4fa9b356e4040bc10888c083a89779}
       \strng{authorfullhash}{3c4fa9b356e4040bc10888c083a89779}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Price: €8,990 (€10,877.90 incl. VAT). eIDAS qualified QSCD capable.}
@@ -173,11 +227,11 @@
       \strng{authorbibnamehash}{28be78fb282d476218347eed367db341}
       \strng{authornamehash}{28be78fb282d476218347eed367db341}
       \strng{authorfullhash}{28be78fb282d476218347eed367db341}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{X-tee turvaserver}
+      \field{title}{X-Road security server}
       \field{urlday}{9}
       \field{urlmonth}{8}
       \field{urlyear}{2025}
@@ -203,8 +257,8 @@
       \strng{authorbibnamehash}{197ece27aa3f03b86791a0b6141dbff5}
       \strng{authornamehash}{197ece27aa3f03b86791a0b6141dbff5}
       \strng{authorfullhash}{197ece27aa3f03b86791a0b6141dbff5}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Tab Reloader}
@@ -232,8 +286,8 @@
       \strng{authornamehash}{7ace771b22ac28958ff5694e260839cc}
       \strng{authorfullhash}{7ace771b22ac28958ff5694e260839cc}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Kotlin-first approach for Android development}
@@ -262,8 +316,8 @@
       \strng{authorbibnamehash}{3d9f5e242a520512d8eb5911e1655b07}
       \strng{authornamehash}{3d9f5e242a520512d8eb5911e1655b07}
       \strng{authorfullhash}{3d9f5e242a520512d8eb5911e1655b07}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{OkHttp}
@@ -348,7 +402,7 @@
       \strng{authorbibnamehash}{ecef54b45dfaddc6c79a15ef832e2ac7}
       \strng{authornamehash}{ecef54b45dfaddc6c79a15ef832e2ac7}
       \strng{authorfullhash}{ecef54b45dfaddc6c79a15ef832e2ac7}
-      \field{extraname}{3}
+      \field{extraname}{4}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -377,7 +431,7 @@
       \strng{authorbibnamehash}{ecef54b45dfaddc6c79a15ef832e2ac7}
       \strng{authornamehash}{ecef54b45dfaddc6c79a15ef832e2ac7}
       \strng{authorfullhash}{ecef54b45dfaddc6c79a15ef832e2ac7}
-      \field{extraname}{4}
+      \field{extraname}{5}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -409,8 +463,8 @@
       \strng{authornamehash}{77f583af40b09e2e99038de511fe87ae}
       \strng{authorfullhash}{77f583af40b09e2e99038de511fe87ae}
       \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Screenshots taken from the Estonian state portal (eesti.ee) showing GovSSO session management interface}
@@ -429,9 +483,9 @@
       \strng{authorbibnamehash}{ecef54b45dfaddc6c79a15ef832e2ac7}
       \strng{authornamehash}{ecef54b45dfaddc6c79a15ef832e2ac7}
       \strng{authorfullhash}{ecef54b45dfaddc6c79a15ef832e2ac7}
-      \field{extraname}{5}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extraname}{6}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{JavaScript code excerpt}
@@ -459,8 +513,8 @@
       \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Protocol Buffers}
@@ -490,8 +544,8 @@
       \strng{authornamehash}{77f583af40b09e2e99038de511fe87ae}
       \strng{authorfullhash}{77f583af40b09e2e99038de511fe87ae}
       \field{extraname}{3}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Data Access Notifier}
@@ -521,8 +575,8 @@
       \strng{authornamehash}{77f583af40b09e2e99038de511fe87ae}
       \strng{authorfullhash}{77f583af40b09e2e99038de511fe87ae}
       \field{extraname}{4}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Data Access Notifier Releases}

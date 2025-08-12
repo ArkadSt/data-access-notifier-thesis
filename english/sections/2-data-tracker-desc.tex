@@ -37,9 +37,9 @@ Another way to access Data tracker data is through Estonian Population Registry,
 
 
 \subsection{Adoption}
-The current adoption of \textit{Andmejälgija} has some noticeable issues. Very often it is not at all clear why your data have been accessed, at least from the first glance. Explanation messages are vague and confusing, often being similar to "data access by personal code", making it difficult to understand the reason behind the data access, even if it was you who accessed it.
+The current adoption of \textit{Andmejälgija} has some noticeable issues. Very often it is not at all clear why your data have been accessed, at least from the first glance. Explanation messages are vague and confusing, often being similar to ``data access by personal code'', making it difficult to understand the reason behind the data access, even if it was you who accessed it.
 
-There is even an information sheet with recommendations for services implementing the \textit{Andmejälgija} protocol, and it states that providing poor quality explanations for data access is a bad practice.\footnote{\url{https://www.ria.ee/sites/default/files/documents/2022-11/Soovitusi-Andmejalgija-rakendamiseks.pdf}} 
+There is even an information sheet with recommendations for services implementing the \textit{Andmejälgija} protocol, and it states that providing poor quality explanations for data access is a bad practice\cite{ria-andmejalgija-recommendations}. The good and poor examples of data access descriptions are shown in Table~\ref{tab:example-good} and Table~\ref{tab:example-bad}.
 
 \textbf{Good practice example:}
 
@@ -54,7 +54,8 @@ There is even an information sheet with recommendations for services implementin
 19.01.2018 10:58:23 & Individual query for valid driver's licenses through state portal \textit{eesti.ee} & Jaan Kask 32405023456 \\
 \hline
 \end{tabular}
-\caption{Example of good data access descriptions}
+\caption{Example of good data access descriptions\cite{ria-andmejalgija-recommendations}}
+\label{tab:example-good}
 \end{table}
 
 \textbf{Bad practice example:}
@@ -70,10 +71,11 @@ There is even an information sheet with recommendations for services implementin
 19.01.2018 10:58:23 & INDIVIDUAL EXTENDED INFO QUERY BY PERSONAL CODE & FOUNDATION Y \\
 \hline
 \end{tabular}
-\caption{Example of poor data access descriptions}
+\caption{Example of poor data access descriptions\cite{ria-andmejalgija-recommendations}}
+\label{tab:example-bad}
 \end{table}
 
-Apparently, the advice is often ignored, as many institutions tend to follow the bad example in practice. The thesis author's Data Tracker view is flooded with entries containing meaningless descriptions like the following:
+Apparently, the advice is often ignored, as many institutions tend to follow the bad example in practice. The thesis author's Data Tracker view is flooded with entries containing poor quality descriptions like those shown in Table~\ref{tab:author-data-tracker}.
 
 \begin{table}[H]
 \centering
@@ -89,8 +91,9 @@ Apparently, the advice is often ignored, as many institutions tend to follow the
 \hline
 \end{tabular}
 \caption{Extract from author's Data Tracker view demonstrating poor quality descriptions}
+\label{tab:author-data-tracker}
 \end{table}
 
-Furthermore, currently there is no law requiring institutions to implement the \textit{Andmejälgija} protocol, meaning that its use is pretty much voluntary.
+Furthermore, currently there is no law requiring institutions to implement the \textit{Andmejälgija} protocol, meaning that its use is essentially voluntary. This may change in the future, however, as the current coalition government formed by the Estonian Reform Party and Eesti 200 has promised to make the use of \textit{Andmejälgija} compulsory according to their coalition agreement\cite{coalition-agreement-2025-2027}.
 
 In the following chapters I will cover different state databases and their implementations of \textit{Andmejälgija}, and whether they implement the protocol at all.

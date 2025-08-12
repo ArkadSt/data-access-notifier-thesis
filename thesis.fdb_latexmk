@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber thesis"] 1755013354.63398 "thesis.bcf" "thesis.bbl" "thesis" 1755013890.00227 0
-  "english/references.bib" 1754944780.67724 5536 b8b61796125c397df2b1f5690e759be2 ""
-  "thesis.bcf" 1755013889.60825 109511 9ace3ad8dd7a9645395d5a0ed260a394 "pdflatex"
+["biber thesis"] 1755017632.80918 "thesis.bcf" "thesis.bbl" "thesis" 1755017693.23685 0
+  "english/references.bib" 1755017614.41869 6101 5b8b7d4f9c0d83c39d3ab30fe24e4a9d ""
+  "thesis.bcf" 1755017692.81002 110036 32f4bbcc22998b39d78de49a2c2c3b6b "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
   (rewritten before read)
-["pdflatex"] 1755013884.57283 "/home/arkadi/Desktop/data-access-notifier-thesis/thesis.tex" "thesis.pdf" "thesis" 1755013890.00258 0
+["pdflatex"] 1755017688.28208 "/home/arkadi/Desktop/data-access-notifier-thesis/thesis.tex" "thesis.pdf" "thesis" 1755017693.23714 0
   "/home/arkadi/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/arial-bold-italic.luc" 1754234213.30503 101126 c4d5453b66dd5dac21ca2aacf72cabb2 ""
   "/home/arkadi/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/arial.luc" 1754234213.27003 141416 fa6ddd807eec1129214ac1cecce59705 ""
   "/home/arkadi/.texlive2023/texmf-var/luatex-cache/generic/fonts/otl/arialbd.luc" 1754234213.34403 142004 8ea639a6eddc39f8ec50572c26672081 ""
@@ -318,21 +318,21 @@
   "english/figures/Screenshot_20250810_154411_Data Access Notifier.jpg" 1754830600.33592 420328 dade0b093db4fb877ae3d42497153b14 ""
   "english/figures/aj_model.PNG" 1754829197.1783 32469 5ce776ce27899520f675b7352e636de2 ""
   "english/figures/e-toimik.png" 1754224100 66145 be2732340a32042c8a477e05ff89d05e ""
-  "english/main.tex" 1754945406.13643 972 60b1bd548ce835999d27eb4c47c38cb7 ""
+  "english/main.tex" 1755015691.54865 972 60b1bd548ce835999d27eb4c47c38cb7 ""
   "english/sections/0-info.tex" 1754938268.2342 2263 4a0ebb8fdfd775516eb739a03b0a5670 ""
   "english/sections/1-introduction.tex" 1755011778.79108 2550 d134503057622ec615068a215f2e2e30 ""
   "english/sections/11-license.tex" 1754765399.63773 1516 a640ed6c4859ccd4dd38dd3beab7cc29 ""
-  "english/sections/12-glossary.tex" 1754940248.95152 3498 2240f4dab789346999af394b3972a3c1 ""
-  "english/sections/2-data-tracker-desc.tex" 1755012833.75904 5144 12aa14a825a37cc0607d098d4bfd2c2d ""
+  "english/sections/12-glossary.tex" 1755014581.01121 3499 b2b4cd3c41d3a304299196b2b211795a ""
+  "english/sections/2-data-tracker-desc.tex" 1755017687.93794 5665 7bcc6a0cb48f1793ae6b58f13f000df7 ""
   "english/sections/3-state-databases-overview.tex" 1755013884.29224 5687 e4137ff1f908209b9b249fc980e48143 ""
   "english/sections/4-conclusion.tex" 1754834657.51792 463 564e8ed29b3955f047b887f38a764d31 ""
-  "english/sections/5-implementation.tex" 1755013884.38524 33512 41512e44fa6db5454af12c469e5a4862 ""
+  "english/sections/5-implementation.tex" 1755014554.51318 33515 0c13f1505471d16da5ba8dc4668a2f11 ""
   "english/sections/discussion.tex" 1754835971.35798 1602 80efca1eae1a7ff883f75e8c74b3e7d6 ""
-  "thesis.aux" 1755013889.55425 36319 52cbaf56f14d505e9a989d1e6c2fd352 "pdflatex"
-  "thesis.bbl" 1755013355.71633 24869 120de840aeedd820d1d7f3b27a5567f9 "biber thesis"
-  "thesis.run.xml" 1755013889.61025 2761 88e169fe32d550c3f2df497dc28dc476 "pdflatex"
+  "thesis.aux" 1755017692.77002 37666 baf100844b552853fffe3543e8273956 "pdflatex"
+  "thesis.bbl" 1755017634.31405 27297 6b152f8d8f3bded4d173f6b5007f5654 "biber thesis"
+  "thesis.run.xml" 1755017692.81202 2761 88e169fe32d550c3f2df497dc28dc476 "pdflatex"
   "thesis.tex" 1754945371.30235 835 8df379550bebe43d6233130428b62c14 ""
-  "thesis.toc" 1755013889.61025 4078 e185475772847f76ed6a7e684d024bc3 "pdflatex"
+  "thesis.toc" 1755017692.81202 4078 e185475772847f76ed6a7e684d024bc3 "pdflatex"
   "unitartucs/citations/biblatex.bbx" 1754224098 1045 1534c5b130305b46848aaf035783420e ""
   "unitartucs/citations/biblatex.cbx" 1754224098 409 47fc3861c2be2cc2b3214f259e339dfe ""
   "unitartucs/citations/numeric.bbx" 1754224098 280 1ec600b6a289888f93cb05e4a7a6303b ""
