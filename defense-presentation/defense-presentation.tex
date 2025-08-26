@@ -113,9 +113,9 @@ Supervisor: Daniel Würsch, MSc
 \textbf{Disadvantages:}
 \begin{itemize}
     \item Legal entity required
-    \item HSM hardware (\textasciitilde€9,000)
+    \item eIDAS compliant HSM required
     \item Compliance obligations
-    \item Permission (contract) needed from each data controller
+    \item Permission needed from each data controller
     \item Another data controller introduced
 \end{itemize}
 \end{block}
@@ -146,7 +146,7 @@ Supervisor: Daniel Würsch, MSc
 \begin{itemize}
     \item \textbf{Easy Setup:} One-click installation from GitHub releases
     \item \textbf{Built-in Notifications:} Native Android notification system
-    \item Operates as standalone client - no reliance on third-parties.
+    \item Operates as a standalone client - no reliance on third-parties.
 \end{itemize}
 \end{block}
 
@@ -164,8 +164,8 @@ Supervisor: Daniel Würsch, MSc
 \begin{column}{0.40\textwidth}
 \begin{itemize}
     \item Authentication to \textit{eesti.ee} happens through TARA, leveraging Android WebView.
-    \item Resulting cookies are used to poll internal \textit{eesti.ee} API
-    \item A combination of AlarmManager and foreground services is used for consistent session extention and API polling.
+    \item Resulting cookies are used to poll the internal \textit{eesti.ee} API
+    \item A combination of AlarmManager and foreground services is used for consistent session extension and API polling.
 
 \end{itemize}
 \end{column}
@@ -182,8 +182,7 @@ Supervisor: Daniel Würsch, MSc
 \frametitle{Key Implementation Challenges}
 \begin{block}{Session Management}
 \begin{itemize}
-    \item Keeping the session alive (JWT token lives 30 minutes)
-restriction
+    \item Keeping the session alive (JWT token is valid for 30 minutes)
 \end{itemize}
 \end{block}
 
@@ -254,7 +253,7 @@ restriction
 \begin{itemize}
     \item Notifications received for events months in the past
     \begin{itemize}
-        \item May 2025 (and even February 2025) events appearing in August 2025
+        \item Events from May 2025 (and even February 2025) appearing in August 2025
         \item Suggests delays in logging infrastructure
     \end{itemize}
 \end{itemize}
@@ -311,7 +310,9 @@ restriction
 \frametitle{Systematic Issues}
 \begin{block}{Poor Quality Descriptions}
 \begin{center}
-\begin{tabular}{|p{3cm}|p{4cm}|}
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\begin{tabular}{|p{2.5cm}|p{3.5cm}|}
 \hline
 \textbf{Bad Practice} & \textbf{Good Practice} \\
 \hline
@@ -320,15 +321,19 @@ PERSONAL DATA BY PERSONAL CODE & Prescription viewed by doctor; prescription num
 INDIVIDUAL EXTENDED INFO QUERY & Individual query for valid driver's licenses through state portal eesti.ee \\
 \hline
 \end{tabular}
-\begin{tabular}{|p{2cm}|p{3cm}|}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{tabular}{|p{2.5cm}|p{3.5cm}|}
 \hline
 \textbf{Bad Practice} & \textbf{Good Practice} \\
 \hline
-Doctor Viktor Pihlakas & INSTITUTION X \\
+INSTITUTION X & Doctor Viktor Pihlakas \\
 \hline
-Jaan Kask 32405023456 & FOUNDATION Y \\
+FOUNDATION Y & Jaan Kask 32405023456 \\
 \hline
 \end{tabular}
+\end{column}
+\end{columns}
 \end{center}
 \end{block}
 
