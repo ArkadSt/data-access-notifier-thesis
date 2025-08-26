@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.8.3)  12 AUG 2025 23:34
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2025.8.3)  24 AUG 2025 20:12
  system commands enabled.
  file:line:error style messages enabled.
 **/home/arkadi/Desktop/data-access-notifier-thesis/thesis.tex
@@ -1665,12 +1665,12 @@ Here is how much of LuaTeX's memory you used:
  125056,1977958 words of node,token memory allocated
  1585 words of node memory still in use:
    9 hlist, 3 vlist, 4 rule, 1 disc, 2 local_par, 10 glue, 4 kern, 2 penalty, 16 glyph, 229 attribute, 74 glue_spec, 110 attribute_list, 2 write, 15 pdf_action nodes
-   avail lists: 1:8,2:18420,3:1996,4:302,5:261,6:135,7:7048,8:163,9:667,10:27,11:491,12:1
+   avail lists: 1:8,2:18420,3:1996,4:302,5:261,6:135,7:7048,8:163,9:667,10:27,11:504,12:1
  61790 multiletter control sequences out of 65536+600000
  102 fonts using 14191431 bytes
  122i,11n,115p,1855b,4051s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/fonts/truetype/msttcorefonts/couri.ttf></usr/share/fonts/truetype/msttcorefonts/cour.ttf></usr/share/fonts/truetype/msttcorefonts/courbd.ttf></usr/share/fonts/truetype/msttcorefonts/Times_New_Roman_Bold_Italic.ttf></usr/share/fonts/truetype/msttcorefonts/Times_New_Roman_Italic.ttf></usr/share/fonts/truetype/msttcorefonts/arialbd.ttf></usr/share/fonts/truetype/msttcorefonts/Times_New_Roman_Bold.ttf></usr/share/fonts/truetype/msttcorefonts/Times_New_Roman.ttf>
-Output written on thesis.pdf (40 pages, 4691407 bytes).
+Output written on thesis.pdf (40 pages, 4691584 bytes).
 
 PDF statistics: 749 PDF objects out of 1000 (max. 8388607)
  605 compressed objects within 7 object streams

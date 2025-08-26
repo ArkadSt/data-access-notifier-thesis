@@ -524,10 +524,10 @@
       \field{urlyear}{2025}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://www.\href{https://www.eesti.ee}{eesti.ee}
+      \verb https://www.eesti.ee
       \endverb
       \verb{url}
-      \verb https://www.%5Chref%7Bhttps://www.eesti.ee%7D%7Beesti.ee%7D
+      \verb https://www.eesti.ee
       \endverb
     \endentry
     \entry{protocol-buffers}{online}{}
